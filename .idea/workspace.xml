@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="readWork:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc75b4d2-4cda-409d-b838-5eaebc45c620" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/com/demo/service/IndexServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/demo/dao/UserDAO.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/demo/view/ToJSON.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/demo/dao/UserDAOImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/html/login/js/signup.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/demo/controller/index/Signup.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/demo/service/CreateService.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/demo/service/CreateServicelmpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/demo/pojo/JsonData.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="checksumPolicy" value="FAIL" />
+        <option name="failureBehavior" value="FAST" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2YtDi9alDxQBLDT9xY7C8igKKoZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="20" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.space" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\readWork" />
+      <recent name="D:\IdeaProjects\readWork\out\production\readWork" />
+      <recent name="D:\IdeaProjects\readWork\out\production" />
+      <recent name="D:\IdeaProjects\readWork\web\js" />
+      <recent name="D:\IdeaProjects\readWork\web\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="openRunningConfigInTab" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="mvcDemo" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="mvcDemo" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/web_war_exploded/html/main.html" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="readWork:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/web_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="9903dc58-45cb-4098-8cde-f95630e5796d" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="65182" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="readWork:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc75b4d2-4cda-409d-b838-5eaebc45c620" name="Changes" comment="" />
+      <created>1701336109738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701336109738</updated>
+      <workItem from="1701336111671" duration="32191000" />
+      <workItem from="1701658533295" duration="66000" />
+      <workItem from="1701740194281" duration="856000" />
+      <workItem from="1701741954327" duration="651000" />
+      <workItem from="1701776696797" duration="11000" />
+      <workItem from="1701917211519" duration="5597000" />
+      <workItem from="1701959754565" duration="1874000" />
+      <workItem from="1701995617930" duration="8132000" />
+      <workItem from="1702289702518" duration="572000" />
+      <workItem from="1702290317806" duration="990000" />
+      <workItem from="1702292116642" duration="2326000" />
+      <workItem from="1702294492670" duration="859000" />
+      <workItem from="1702303563688" duration="100000" />
+      <workItem from="1702303682878" duration="2362000" />
+      <workItem from="1702306107409" duration="2250000" />
+      <workItem from="1702339641365" duration="1729000" />
+      <workItem from="1702341410374" duration="9316000" />
+      <workItem from="1702366220619" duration="239000" />
+      <workItem from="1702379840623" duration="5382000" />
+      <workItem from="1702475410175" duration="1585000" />
+      <workItem from="1702513921422" duration="6175000" />
+      <workItem from="1702520524691" duration="6639000" />
+      <workItem from="1702538908589" duration="4171000" />
+      <workItem from="1702543960841" duration="1240000" />
+      <workItem from="1702562969417" duration="5646000" />
+      <workItem from="1702568946226" duration="1706000" />
+      <workItem from="1702570734289" duration="335000" />
+      <workItem from="1702571091256" duration="126000" />
+      <workItem from="1702600060121" duration="793000" />
+      <workItem from="1702601366513" duration="301000" />
+      <workItem from="1702601679943" duration="107000" />
+      <workItem from="1702601925583" duration="970000" />
+      <workItem from="1702602993561" duration="8088000" />
+      <workItem from="1702615795748" duration="5382000" />
+      <workItem from="1702631689319" duration="9949000" />
+      <workItem from="1702734243522" duration="2563000" />
+      <workItem from="1702786277081" duration="3651000" />
+      <workItem from="1702810108721" duration="8370000" />
+      <workItem from="1702871810455" duration="7074000" />
+      <workItem from="1702879672749" duration="18367000" />
+      <workItem from="1702944276217" duration="7000" />
+      <workItem from="1702958324457" duration="12560000" />
+      <workItem from="1702998296563" duration="699000" />
+      <workItem from="1703036759188" duration="5256000" />
+      <workItem from="1703055580793" duration="19016000" />
+      <workItem from="1703086524933" duration="2052000" />
+      <workItem from="1703123518354" duration="21765000" />
+      <workItem from="1703147208088" duration="1765000" />
+      <workItem from="1703149847255" duration="1822000" />
+      <workItem from="1703153286532" duration="20748000" />
+      <workItem from="1703209870259" duration="25080000" />
+      <workItem from="1703244494622" duration="7897000" />
+      <workItem from="1703252483927" duration="1420000" />
+      <workItem from="1703298755726" duration="10198000" />
+      <workItem from="1703309631869" duration="28564000" />
+      <workItem from="1703383715651" duration="1692000" />
+      <workItem from="1703386037561" duration="6948000" />
+      <workItem from="1703399063319" duration="306000" />
+      <workItem from="1703399413024" duration="20000" />
+      <workItem from="1703399543891" duration="26559000" />
+      <workItem from="1703429008010" duration="9463000" />
+      <workItem from="1703480246405" duration="27007000" />
+      <workItem from="1703511856069" duration="8783000" />
+      <workItem from="1703520742700" duration="2576000" />
+      <workItem from="1703523527780" duration="85000" />
+      <workItem from="1703552889393" duration="6336000" />
+      <workItem from="1703652935618" duration="5587000" />
+      <workItem from="1703738645051" duration="744000" />
+      <workItem from="1703752212499" duration="624000" />
+      <workItem from="1703837233315" duration="2583000" />
+      <workItem from="1704125423243" duration="372000" />
+      <workItem from="1704289585045" duration="746000" />
+      <workItem from="1704950184128" duration="4051000" />
+      <workItem from="1705729094882" duration="5881000" />
+      <workItem from="1708436958886" duration="447000" />
+      <workItem from="1708504358702" duration="220000" />
+      <workItem from="1708506074974" duration="642000" />
+      <workItem from="1709626153400" duration="46000" />
+      <workItem from="1710741914333" duration="95000" />
+      <workItem from="1710742076498" duration="612000" />
+      <workItem from="1710749726875" duration="123000" />
+      <workItem from="1710749869306" duration="836000" />
+      <workItem from="1711249416947" duration="50000" />
+      <workItem from="1711347010232" duration="607000" />
+      <workItem from="1711441596816" duration="770000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/dao/EbookDAOImpl.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/dao/ReviewebookDAOImpl.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/dao/UserDAOImpl.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/BookIndexServicelmpl.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/EBookIndexServiceImpl.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/dao/EbookDAOImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/BookIndexServicelmpl.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/dao/BookDAOImpl.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/controller/user/Update.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/UserServiclmpl.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/UserServiclmpl.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/html/read.html</url>
+          <line>154</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/html/admain/book.js</url>
+          <line>238</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/html/admain/book.js</url>
+          <line>176</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/html/admain/book.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/html/admain/user.js</url>
+          <line>146</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/html/admain/user.js</url>
+          <line>201</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/html/bookcontain.html</url>
+          <line>169</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/js/classify2.js</url>
+          <line>534</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/demo/dao/UserDAOImpl.java</url>
+          <line>84</line>
+          <properties class="com.demo.dao.UserDAOImpl" method="loginCheck">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/demo/dao/EbookDAOImpl.java</url>
+          <line>31</line>
+          <properties class="com.demo.dao.EbookDAOImpl" method="select">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/EBookIndexServiceImpl.java</url>
+          <line>113</line>
+          <properties class="com.demo.service.EBookIndexServiceImpl" method="update">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/ReviewIndexServicelmpl.java</url>
+          <line>48</line>
+          <properties class="com.demo.service.ReviewIndexServicelmpl" method="insert">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/demo/service/Order2Servicelml.java</url>
+          <line>36</line>
+          <properties class="com.demo.service.Order2Servicelml">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/readWork$mvcDemo.ic" NAME="mvcDemo Coverage Results" MODIFIED="1702602653078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

@@ -1,0 +1,1277 @@
+@font-face {
+	font-family:"iconfont";
+	src:url('iconfont.eot?t=1489857474667'); /*IE9*/
+	src:url('iconfont.eot?t=1489857474667#iefix')
+		format('embedded-opentype'), /*IE6-IE8*/ 
+ url('iconfont.woff?t=1489857474667') format('woff'), /*chrome,firefox*/
+		
+ url('iconfont.ttf?t=1489857474667') format('truetype'),
+		/*chrome,firefox,opera,Safari,Android,iOS4.2+*/ 
+ url('iconfont.svg?t=1489857474667#iconfont') format('svg'); /*iOS4.1-*/
+}
+
+.iconfont, [class*=icon] {
+	font-family:"iconfont";
+	font-size:14px;
+	font-style:normal;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+/*
+====================
+页面工具栏专用icon
+====================
+*/
+.icon-selectAll:before { /*选中所有*/
+	content:"\f795";
+}
+.icon-all:before { /*所有*/
+	content:"\e696";
+}
+
+.icon-back:before { /*后退*/
+	content:"\e697";
+}
+
+.icon-cart:before { /*大类*/
+	content:"\e698";
+}
+
+.icon-category:before { /*类别*/
+	content:"\e699";
+}
+
+.icon-close:before { /*关闭*/
+	content:"\e6b7";
+}
+
+.icon-comments:before { /*评论*/
+	content:"\e69b";
+}
+
+.icon-cry:before { /*哭*/
+	content:"\e69c";
+}
+
+.icon-delete:before { /*删除*/
+	content:"\e69d";
+}
+
+.icon-remove:before { /*移除*/
+	content:"\e69d";
+}
+
+.icon-edit:before { /*编辑*/
+	content:"\e69e";
+}
+
+.icon-email:before { /*电子邮件*/
+	content:"\e028";
+}
+
+.icon-mail:before { /*邮件*/
+	content:"\f72a";
+}
+
+.icon-message:before { /*信息*/
+	content:"\f731";
+}
+
+.icon-favorite:before { /*喜爱*/
+	content:"\e6a0";
+}
+
+.icon-folder:before { /*夹*/
+	content:"\e6a1";
+}
+
+.icon-form:before { /*形成*/
+	content:"\e6a2";
+}
+
+.icon-help:before { /*帮助*/
+	content:"\e6a3";
+}
+
+.icon-information:before { /*信息*/
+	content:"\e6a4";
+}
+
+.icon-less:before { /*减*/
+	content:"\e6a5";
+}
+
+.icon-moreunfold:before { /*更多展开*/
+	content:"\e6a6";
+}
+
+.icon-more:before { /*更多*/
+	content:"\e6a7";
+}
+
+.icon-pic:before { /*PIC*/
+	content:"\e6a8";
+}
+
+.icon-qrcode:before { /*二维码*/
+	content:"\e6a9";
+}
+
+.icon-refresh:before { /*刷新*/
+	content:"\e6aa";
+}
+
+.icon-rfq:before { /*RFQ*/
+	content:"\e6ab";
+}
+
+.icon-search:before { /*搜索*/
+	content:"\e6ac";
+}
+
+.icon-tip:before { /*小费*/
+	content:"\e6de";
+}
+
+.icon-section:before { /*部分*/
+	content:"\f796";
+}
+
+.icon-selected:before { /*选择*/
+	content:"\e6ad";
+}
+
+.icon-set:before { /*设置*/
+	content:"\e6ae";
+}
+
+.icon-success:before { /*成功*/
+	content:"\e6b1";
+}
+
+.icon-survey:before { /*调查*/
+	content:"\e6b2";
+}
+
+.icon-training:before { /*训练*/
+	content:"\e6b3";
+}
+
+.icon-viewgallery:before { /*查看图库*/
+	content:"\e6b4";
+}
+
+.icon-lightbulb:before { /*灯泡*/
+	content:"\e030";
+}
+
+.icon-viewlist:before { /*查看列表*/
+	content:"\e6b5";
+}
+
+.icon-warning:before { /*警告*/
+	content:"\e6b6";
+}
+
+.icon-wrong:before { /*错误*/
+	content:"\e6b7";
+}
+
+.icon-user:before { /*用户*/
+	content:"\e91d";
+}
+
+.icon-account:before { /*帐户*/
+	content:"\e6b8";
+}
+
+.icon-male:before { /*男*/
+	content:"\e040";
+}
+
+.icon-female:before { /*女*/
+	content:"\e041";
+}
+
+.icon-add:before { /*加*/
+	content:"\e6b9";
+}
+
+.icon-atm:before { /*自动取款机*/
+	content:"\e6ba";
+}
+
+.icon-clock:before { /*时钟*/
+	content:"\e6bb";
+}
+
+.icon-remind:before { /*提醒*/
+	content:"\e6bc";
+}
+
+.icon-calendar:before { /*日历*/
+	content:"\e6bf";
+}
+
+.icon-attachment:before { /*附件*/
+	content:"\e6c0";
+}
+
+.icon-3column:before { /*3栏*/
+	content:"\e6c3";
+}
+
+.icon-4column:before { /*4栏*/
+	content:"\e6c4";
+}
+
+.icon-discount:before { /*折扣*/
+	content:"\e6c5";
+}
+
+.icon-service:before { /*服务*/
+	content:"\e6c7";
+}
+
+.icon-print:before { /*打印*/
+	content:"\e6c9";
+}
+
+.icon-box:before { /*框*/
+	content:"\e6cb";
+}
+
+.icon-process:before { /*处理*/
+	content:"\e6ce";
+}
+
+.icon-bags:before { /*包装袋*/
+	content:"\e6d1";
+}
+
+.icon-beauty:before { /*美女*/
+	content:"\e6d2";
+}
+
+.icon-electrical:before { /*电动*/
+	content:"\e6d4";
+}
+
+.icon-home:before { /*家*/
+	content:"\e6d7";
+}
+
+.icon-electronics:before { /*电子产品*/
+	content:"\e6da";
+}
+
+.icon-gifts:before { /*礼品*/
+	content:"\e6db";
+}
+
+.icon-apparel:before { /*服饰*/
+	content:"\e6dc";
+}
+
+.icon-lights:before { /*灯火*/
+	content:"\e6de";
+}
+
+.icon-sports:before { /*体育*/
+	content:"\e6e0";
+}
+
+.icon-toys:before { /*玩具*/
+	content:"\e6e1";
+}
+
+.icon-auto:before { /*汽车*/
+	content:"\e6e3";
+}
+
+.icon-jewelry:before { /*首饰*/
+	content:"\e6e4";
+}
+
+.icon-trade-assurance:before { /*贸易保障*/
+	content:"\e6e5";
+}
+
+.icon-browse:before { /*浏览*/
+	content:"\e6e6";
+}
+
+.icon-rfqqm:before { /*rfqqm*/
+	content:"\e6e7";
+}
+
+.icon-rfqquantity:before { /*rfq数量*/
+	content:"\e6e8";
+}
+
+.icon-atmaway:before { /*离开了*/
+	content:"\e6e9";
+}
+
+.icon-rfq1:before { /*rfq1*/
+	content:"\e6eb";
+}
+
+.icon-scanning:before { /*扫描*/
+	content:"\e6ec";
+}
+
+.icon-check:before { /*校验*/
+	content:"\f6cb";
+}
+
+.icon-compare:before { /*相比*/
+	content:"\e6ee";
+}
+
+.icon-filter:before { /*过滤*/
+	content:"\e6f1";
+}
+
+.icon-pin:before { /*销*/
+	content:"\e6f2";
+}
+
+.icon-history:before { /*历史*/
+	content:"\e6f3";
+}
+
+.icon-productfeatures:before { /*产品功能*/
+	content:"\e6f4";
+}
+
+.icon-supplierfeatures:before { /*供应商特色*/
+	content:"\e6f5";
+}
+
+.icon-similarproduct:before { /*类似的产品*/
+	content:"\e6f6";
+}
+
+.icon-link:before { /*链接*/
+	content:"\e6f7";
+}
+
+.icon-cut:before { /*切*/
+	content:"\e6f8";
+}
+
+.icon-navlist:before { /*导航列表*/
+	content:"\e6fa";
+}
+
+.icon-imagetext:before { /*图像文字*/
+	content:"\e6fb";
+}
+
+.icon-text:before { /*文本*/
+	content:"\e6fc";
+}
+
+.icon-move:before { /*移动*/
+	content:"\e6fd";
+}
+
+.icon-subtract:before { /*减去*/
+	content:"\e6fe";
+}
+
+.icon-dollar:before { /*美元*/
+	content:"\e702";
+}
+
+.icon-raw:before { /*生的*/
+	content:"\e704";
+}
+
+.icon-office:before { /*办公室*/
+	content:"\e705";
+}
+
+.icon-agriculture:before { /*农业*/
+	content:"\e707";
+}
+
+.icon-machinery:before { /*机械*/
+	content:"\e709";
+}
+
+.icon-assessedbadge:before { /*评估dbadge*/
+	content:"\e70a";
+}
+
+.icon-gerenzhongxin:before { /*个人中心*/
+	content:"\e70b";
+}
+
+.icon-jifen:before { /*齑粉*/
+	content:"\e70c";
+}
+
+.icon-renwuguanli:before { /*任务管理*/
+	content:"\e70d";
+}
+
+.icon-operation:before { /*手术*/
+	content:"\e70e";
+}
+
+.icon-remind1:before { /*提醒1*/
+	content:"\e713";
+}
+
+.icon-map:before { /*地图*/
+	content:"\e715";
+}
+
+.icon-bad:before { /*坏*/
+	content:"\e716";
+}
+
+.icon-good:before { /*好*/
+	content:"\e717";
+}
+
+.icon-skip:before { /*跳跃*/
+	content:"\e718";
+}
+
+.icon-iconfontplay2:before { /*iconfont播放2*/
+	content:"\e719";
+}
+
+.icon-iconfontstop:before { /*iconfont停止*/
+	content:"\e71a";
+}
+
+.icon-compass:before { /*罗盘*/
+	content:"\e71b";
+}
+
+.icon-security:before { /*安全*/
+	content:"\e71c";
+}
+
+.icon-share:before { /*分享*/
+	content:"\e71d";
+}
+
+.icon-upload:before { /*上载*/
+	content:"\e04c";
+}
+
+.icon-download:before { /*下载*/
+	content:"\e04d";
+}
+
+.icon-load:before { /*加载*/
+	content:"\f467";
+}
+
+.icon-import:before { /*进口*/
+	content:"\f6f5";
+}
+
+.icon-export:before { /*出口*/
+	content:"\f765";
+}
+
+.icon-store:before { /*商店*/
+	content:"\e722";
+}
+
+.icon-manageorder:before { /*管理订单*/
+	content:"\e723";
+}
+
+.icon-rejectedorder:before { /*拒绝订单*/
+	content:"\e724";
+}
+
+.icon-phone:before { /*电话*/
+	content:"\e725";
+}
+
+.icon-bussinessman:before { /*商务人士*/
+	content:"\e726";
+}
+
+.icon-shoes:before { /*鞋*/
+	content:"\e728";
+}
+
+.icon-mobilephone:before { /*移动电话*/
+	content:"\e72a";
+}
+
+.icon-emailfilling:before { /*电子邮件填写*/
+	content:"\e69f";
+}
+
+.icon-favoritesfilling:before { /*收藏夹*/
+	content:"\e730";
+}
+
+.icon-accountfilling:before { /*帐户填写*/
+	content:"\e732";
+}
+
+.icon-creditlevel:before { /*信用等级*/
+	content:"\e735";
+}
+
+.icon-creditlevelfilling:before { /*信用等级填补*/
+	content:"\e736";
+}
+
+.icon-doc:before { /*DOC*/
+	content:"\e91f";
+}
+
+.icon-xls:before { /*EXL*/
+	content:"\e903";
+}
+
+.icon-ppt:before { /*PPT*/
+	content:"\e904";
+}
+
+.icon-pdf:before { /*PDF格式*/
+	content:"\e900";
+}
+
+.icon-zip:before { /*压缩*/
+	content:"\e901";
+}
+
+.icon-sorting:before { /*排序*/
+	content:"\e743";
+}
+
+.icon-copy:before { /*复制*/
+	content:"\e744";
+}
+
+.icon-save:before { /*救*/
+	content:"\e747";
+}
+
+.icon-ok:before { /*好*/
+	content:"\e6b1";
+}
+
+.icon-no:before { /*没有*/
+	content:"\e69a";
+}
+
+.icon-inquirytemplate:before { /*查询模板*/
+	content:"\e749";
+}
+
+.icon-templatedefault:before { /*模板默认*/
+	content:"\e74a";
+}
+
+.icon-libra:before { /*天秤座*/
+	content:"\e74c";
+}
+
+.icon-survey1:before { /*调查1*/
+	content:"\e74e";
+}
+
+.icon-ship:before { /*船*/
+	content:"\e74f";
+}
+
+.icon-bussinesscard:before { /*商务卡*/
+	content:"\e753";
+}
+
+.icon-hot:before { /*热*/
+	content:"\e756";
+}
+
+.icon-data:before { /*数据*/
+	content:"\e757";
+}
+
+.icon-trade:before { /*贸易*/
+	content:"\e758";
+}
+
+.icon-onepage48:before { /*一页48*/
+	content:"\e75a";
+}
+
+.icon-signboard:before { /*招牌*/
+	content:"\e75c";
+}
+
+.icon-shuffling-banner:before { /*洗牌横幅*/
+	content:"\e75e";
+}
+
+.icon-component:before { /*零件*/
+	content:"\e75f";
+}
+
+.icon-component-filling:before { /*组分填充*/
+	content:"\e760";
+}
+
+.icon-color:before { /*颜色*/
+	content:"\e761";
+}
+
+.icon-color-filling:before { /*颜色填充*/
+	content:"\e7cd";
+}
+
+.icon-favorites:before { /*最爱*/
+	content:"\e7ce";
+}
+
+.icon-pic-filling:before { /*PIC-填充*/
+	content:"\e802";
+}
+
+.icon-RFQ:before { /*RFQ*/
+	content:"\e803";
+}
+
+.icon-RFQ-filling:before { /*RFQ填充*/
+	content:"\e804";
+}
+
+.icon-originalimage:before { /*原始图像*/
+	content:"\e806";
+}
+
+.icon-logistic:before { /*后勤*/
+	content:"\e811";
+}
+
+.icon-Calculator:before { /*计算器*/
+	content:"\e812";
+}
+
+.icon-course:before { /*课程*/
+	content:"\e705";
+}
+
+.icon-redo:before { /*重做*/
+	content:"\e718";
+}
+
+.icon-undo:before { /*解开*/
+	content:"\e718";
+}
+
+.icon-check:before { /*校验*/
+	content:"\e70b";
+}
+
+.icon-book:before { /*书*/
+	content:"\e705";
+}
+
+.icon-appoint:before { /*委*/
+	content:"\f792";
+}
+
+.icon-combine:before { /*结合*/
+	content:"\f735";
+}
+
+.icon-split:before { /*分裂*/
+	content:"\f72e";
+}
+
+.icon-percent:before { /*百分*/
+	content:"\f746";
+}
+
+.icon-graph1:before { /*图1*/
+	content:"\f82d";
+}
+
+.icon-graph2:before { /*图2*/
+	content:"\f831";
+}
+
+.icon-graph3:before { /*图3*/
+	content:"\e050";
+}
+
+.icon-eye-on:before { /*睁眼*/
+	content:"\f6fc";
+}
+
+.icon-eye-off:before { /*闭眼*/
+	content:"\f6fd";
+}
+
+.icon-recycle:before { /*回收*/
+	content:"\e03e";
+}
+
+.icon-refresh:before { /*刷新*/
+	content:"\e05a";
+}
+
+.icon-change:before { /*更换*/
+	content:"\f758";
+}
+
+.icon-repeat:before { /*更换*/
+	content:"\f75a";
+}
+
+.icon-count:before { /*统计*/
+	content:"\e757";
+}
+
+/**
+====================
+学生页面相关
+====================
+*/
+
+.icon-desktop:before { /*统计*/
+	content:"\f6a0";
+}
+
+.icon-male:before { /*男*/
+	content:"\e040";
+}
+
+.icon-female:before { /*女*/
+	content:"\e041";
+}
+
+.icon-paperless:before { /*无纸化*/
+	content:"\e055";
+}
+
+.icon-pc:before { /*电脑*/
+	content:"\e002";
+}
+
+.icon-windows:before { /*windows操作*/
+	content:"\f477";
+}
+
+.icon-choice:before { /*单项选择*/
+	content:"\e696";
+}
+
+.icon-multiChoice:before { /*多项选择*/
+	content:"\e696";
+}
+
+.icon-typing:before { /*打字e69e*/
+	content:"\f47e";
+}
+
+.icon-blank:before { /*填空*/
+	content:"\e74e";
+}
+
+.icon-judge:before { /*判断e6b2*/
+	content:"\e6b2";
+}
+
+.icon-ie:before { /*ie*/
+	content:"\f6d6";
+}
+
+.icon-calc:before { /*计算*/
+	content:"\f810";
+}
+
+/**
+====================
+侧边导航栏专用icon
+====================
+*/
+[class*=icon-nav] {
+	font-size:16px !important;
+}
+
+/*
+====================
+基础数据basic模块
+====================
+*/
+.icon-nav-college:before { /*学校管理*/
+	content:"\e6b3";
+}
+
+.icon-nav-campus:before { /*校区管理*/
+	content:"\e715";
+}
+
+.icon-nav-department:before { /*部门管理*/
+	content:"\e761";
+}
+
+.icon-nav-section:before { /*科室管理*/
+	content:"\e722";
+}
+
+.icon-nav-employee:before { /*职工管理*/
+	content:"\e6f5";
+}
+
+.icon-nav-major:before { /*专业管理*/
+	content:"\e735";
+}
+
+.icon-nav-information:before { /*个人信息*/
+	content:"\e6f5";
+}
+
+.icon-nav-certificates:before { /*证书信息*/
+	content:"\e6a2";
+}
+
+.icon-nav-emplearning:before { /*学习经历*/
+	content:"\e705";
+}
+
+.icon-nav-empworking:before { /*工作经历*/
+	content:"\e705";
+}
+
+.icon-nav-role:before { /*角色设置*/
+	content:"\e726";
+}
+
+.icon-nav-module:before { /*模块角色*/
+	content:"\e6ae";
+}
+
+.icon-nav-assign:before { /*角色分配*/
+	content:"\e6ba";
+}
+
+.icon-nav-building:before { /*教学楼管理*/
+	content:"\e6b4";
+}
+
+.icon-nav-classroom:before { /*教室管理*/
+	content:"\e6c3";
+}
+
+.icon-nav-stuClass:before { /*班级管理*/
+	content:"\e75e";
+}
+
+.icon-nav-student:before { /*学生管理*/
+	content:"\e6f5";
+}
+
+/*
+====================
+教学工作teaching模块
+====================
+*/
+.icon-nav-courseTask:before { /*课程归属*/
+	content:"\e71b";
+}
+
+.icon-nav-teachingTask:before { /*教学任务*/
+	content:"\e6b3";
+}
+
+.icon-nav-teachingLibrary:before { /*教材管理*/
+	content:"\e705";
+}
+
+.icon-nav-teachingSubscribe:before { /*教材征订*/
+	content:"\e705";
+}
+
+.icon-nav-courseCheck:before { /*课程资料检查*/
+	content:"\e6f6";
+}
+
+.icon-nav-teachingCheck:before { /*教学资料检查*/
+	content:"\e6f4";
+}
+
+.icon-nav-schedule:before { /*课表汇总*/
+	content:"\e6fb";
+}
+
+.icon-nav-scheduleCount:before { /*课表查询*/
+	content:"\f82d";
+}
+
+.icon-nav-paperMaking:before { /*出卷任务*/
+	content:"\e6c0";
+}
+
+.icon-nav-proctor:before { /*监考安排*/
+	content:"\e005";
+}
+
+.icon-nav-proctorQuery:before { /*监考查询*/
+	content:"\e005";
+}
+
+/*
+====================
+专业建设training模块
+====================
+*/
+.icon-nav-course:before { /*专业课程库*/
+	content:"\e70c";
+}
+
+.icon-nav-schemeSetting:before { /*规则设置*/
+	content:"\e6ae";
+}
+
+.icon-nav-courseTemp:before { /*综合教育模板*/
+	content:"\e6a2";
+}
+
+.icon-nav-courseTemplate:before { /*综合教育模板明细*/
+	content:"\e6a2";
+}
+
+.icon-nav-scheme:before { /*培养方案*/
+	content:"\e71b";
+}
+
+.icon-nav-schemeDetail:before { /*培养方案明细*/
+	content:"\e71b";
+}
+
+.icon-nav-schemeDetailGeneral:before { /*综合教育课*/
+	content:"\e70c";
+}
+
+.icon-nav-schemeDetailBasis:before { /*专业基础课*/
+	content:"\e70c";
+}
+
+.icon-nav-schemeDetailMajor:before { /*专业必修课*/
+	content:"\e70c";
+}
+
+.icon-nav-schemeDetailOptional:before { /*专业选修课*/
+	content:"\e70c";
+}
+
+.icon-nav-schemeDetailPeriment:before { /*实践教学课*/
+	content:"\e70c";
+}
+
+.icon-nav-schemeDetailTeaching:before { /*教师教育必修课*/
+	content:"\e70c";
+}
+
+.icon-nav-schemeDetailTeachingTake:before { /*教师教育选修课*/
+	content:"\e70c";
+}
+
+/*
+====================
+教科研工作academic模块
+====================
+*/
+.icon-nav-empAcademicSetting:before { /*教科研分值*/
+	content:"\e6ae";
+}
+
+.icon-nav-prizeSetting:before { /*教科研奖励*/
+	content:"\e6ae";
+}
+
+.icon-nav-empAcademic:before { /*科研论文*/
+	content:"\e74e";
+}
+
+.icon-nav-empResearch:before { /*科研项目*/
+	content:"\e761";
+}
+
+.icon-nav-empPatent:before { /*知识产权*/
+	content:"\e723";
+}
+
+.icon-nav-empTextbook:before { /*编译专著*/
+	content:"\e705";
+}
+
+.icon-nav-empCount:before { /*科研统计*/
+	content:"\f82d";
+}
+
+.icon-nav-empAcademicEdu:before { /*教研论文*/
+	content:"\e74e";
+}
+
+.icon-nav-empResearchEdu:before { /*教研项目*/
+	content:"\e761";
+}
+
+.icon-nav-empEngineer:before { /*教学工程*/
+	content:"\e75f";
+}
+
+.icon-nav-empTextbookEdu:before { /*教材出版*/
+	content:"\e705";
+}
+
+.icon-nav-empCountEdu:before { /*教研统计*/
+	content:"\f82d";
+}
+
+.icon-nav-prizeAcademic:before { /*科研成果*/
+	content:"\e6e5";
+}
+
+.icon-nav-prizeAcademicEdu:before { /*教研成果*/
+	content:"\e6e5";
+}
+
+.icon-nav-academicGroup:before { /*学术团体*/
+	content:"\e6fb";
+}
+
+.icon-nav-academicMeeting:before { /*学术会议*/
+	content:"\e6fb";
+}
+
+.icon-nav-academicReport:before { /*学术报告*/
+	content:"\e6fb";
+}
+
+.icon-nav-academicTraining:before { /*进修培训*/
+	content:"\e6fb";
+}
+
+.icon-nav-academicOthers:before { /*其他方面*/
+	content:"\e6fb";
+}
+
+.icon-nav-prizeLeader:before { /*参赛获奖*/
+	content:"\e6f5";
+}
+
+.icon-nav-prizeInnovation:before { /*创新创业*/
+	content:"\e6de";
+}
+
+/*
+====================
+毕业设计paper模块
+====================
+*/
+.icon-nav-rule:before { /*评分规则*/
+	content:"\e6ae";
+}
+
+.icon-nav-timeSetting:before { /*时间设置*/
+	content:"\e6ae";
+}
+
+.icon-nav-template:before { /*材料模板*/
+	content:"\e705";
+}
+
+.icon-nav-student:before { /*学生管理*/
+	content:"\e6f5";
+}
+
+.icon-nav-guiderTeam:before { /*指导团队*/
+	content:"\e6f5";
+}
+
+.icon-nav-distribution:before { /*任务安排*/
+	content:"\e6b4";
+}
+
+.icon-nav-distributionDefence:before { /*任务分配*/
+	content:"\e6b4";
+}
+
+.icon-nav-topicDefence:before { /*出题任务*/
+	content:"\e6a2";
+}
+
+.icon-nav-guiderTeamDefence:before { /*团队分组*/
+	content:"\e6f5";
+}
+
+.icon-nav-topic:before { /*选题情况*/
+	content:"\e6a2";
+}
+
+.icon-nav-guiderProcess:before { /*指导过程*/
+	content:"\e6f5";
+}
+
+.icon-nav-arrange:before { /*答辩安排*/
+	content:"\e6c5";
+}
+
+.icon-nav-review:before { /*课题审核*/
+	content:"\e70b";
+}
+
+.icon-nav-reviewDefence:before { /*课题评审*/
+	content:"\e70b";
+}
+
+.icon-nav-plea:before { /*答辩环节*/
+	content:"\e6c5";
+}
+
+.icon-nav-record:before { /*答辩记录*/
+	content:"\e75e";
+}
+
+.icon-nav-recordDefence:before { /*答辩结果*/
+	content:"\e75e";
+}
+
+.icon-nav-document:before { /*材料收集*/
+	content:"\e705";
+}
+
+.icon-nav-count:before { /*数据统计*/
+	content:"\f82d";
+}
+
+/*
+====================
+班级工作stuClass模块
+====================
+*/
+.icon-nav-stuEmploymentNews:before { /*就业资讯*/
+	content:"\e6b3";
+}
+
+.icon-nav-stuEmployment:before { /*就业情况*/
+	content:"\e757";
+}
+
+.icon-nav-student:before { /*班级成员*/
+	content:"\e6f5";
+}
+
+.icon-nav-stuCertificates:before { /*证书情况*/
+	content:"\e6ba";
+}
+
+.icon-nav-stuScholar:before { /*奖助学金*/
+	content:"\e6c5";
+}
+
+.icon-nav-stuScore:before { /*学生成绩*/
+	content:"\e6ba";
+}
+
+.icon-nav-stuTotal:before { /*综合测评*/
+	content:"\e6c5";
+}
+
+/*
+====================
+绩效考核efficiency模块
+====================
+*/
+.icon-nav-empTeaching:before { /*理论与实践教学*/
+	content:"\e6a2";
+}
+
+.icon-nav-empPaper:before { /*学生指导工作*/
+	content:"\e6a2";
+}
+
+.icon-nav-empAcademicEdu:before { /*教研论文*/
+	content:"\e6a2";
+}
+
+.icon-nav-empResearchEdu:before { /*教研项目*/
+	content:"\e6a2";
+}
+
+.icon-nav-empTextbookEdu:before { /*教材出版*/
+	content:"\e6a2";
+}
+
+.icon-nav-empAcademicPrizeEdu:before { /*教学奖励*/
+	content:"\e6a2";
+}
+
+.icon-nav-empProfessional:before { /*专业建设*/
+	content:"\e6a2";
+}
+
+.icon-nav-empEngineer:before { /*教学工程*/
+	content:"\e6a2";
+}
+
+.icon-nav-empPrizeLeader:before { /*指导学生参赛*/
+	content:"\e6a2";
+}
+
+.icon-nav-empPrizeInnovation:before { /*指导学生双创*/
+	content:"\e6a2";
+}
+
+.icon-nav-empAcademic:before { /*科研论文*/
+	content:"\e6a2";
+}
+
+.icon-nav-empResearch:before { /*科研项目*/
+	content:"\e6a2";
+}
+
+.icon-nav-empTextbook:before { /*编译专著*/
+	content:"\e6a2";
+}
+
+.icon-nav-empPatent:before { /*知识产权*/
+	content:"\e6a2";
+}
+
+.icon-nav-empAcademicPrize:before { /*科研成果奖*/
+	content:"\e6a2";
+}
+
+.icon-nav-empAcademicTeam:before { /*科研平台与团队*/
+	content:"\e6a2";
+}
+
+.icon-nav-empDiscipline:before { /*学科建设*/
+	content:"\e6a2";
+}
+
+.icon-nav-empInternational:before { /*教育国际化*/
+	content:"\e6a2";
+}
+
+.icon-nav-empTalentTeam:before { /*人才队伍建设*/
+	content:"\e6a2";
+}
+
+.icon-nav-efficiencyEmp:before { /*个人绩效*/
+	content:"\e6a2";
+}
+
+.icon-nav-efficiencyCollege:before { /*学院绩效*/
+	content:"\e6a2";
+}

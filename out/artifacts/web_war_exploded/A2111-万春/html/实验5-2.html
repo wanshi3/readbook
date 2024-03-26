@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    <img src="../实验素材/q.jpg" >
+</div>
+<style type="text/css">
+    .class{
+        width: 120px;
+        height: 150px;
+        top:40%;
+        position: relative;
+    }
+    img{
+        width: 120px;height: 150px;top:30%;position:absolute;animation-name:mymove;  /*定义动画名称*/
+        animation-duration:10s; /*定义动画时间*/
+        animation-timing-function: linear; /*定义动画速率*/animation-iteration-count:2;       /*定义动画的播放次数*/
+        animation-direction:alternate;     /*定义动画播放的方向*/}
+    @keyframes mymove{
+        0%    {  left:-10%; }
+        100%  {  left: 100%;  }}
+
+</style>
+</body>
+</html>

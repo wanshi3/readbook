@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分别操作数组</title>
+</head>
+<body>
+
+<label for="inputArray">输入数组（用逗号分隔）：</label>
+<input type="text" id="inputArray" placeholder="例如：3,1,4,1,5,9,2,6,5,3,5">
+<button onclick="reverseArray()">倒转数组</button>
+<button onclick="sortText()">文本排序</button>
+<button onclick="sortNumeric()">数值排序</button>
+
+<script>
+    var inputArray;
+
+    function getInputArray() {
+        var inputArrayString = document.getElementById('inputArray').value;
+        inputArray = inputArrayString.split(',').map(function(item) {
+            return parseInt(item.trim(), 10);
+        });
+    }
+
+    function reverseArray() {
+        getInputArray();
+        var reversedArray = inputArray.slice().reverse();
+        alert("倒转后的数组：" + reversedArray);
+    }
+
+    function sortText() {
+        getInputArray();
+        var textSortedArray = inputArray.slice().sort();
+        alert("文本排序后的数组：" + textSortedArray);
+    }
+
+    function sortNumeric() {
+        getInputArray();
+        var numericSortedArray = inputArray.slice().sort(function(a, b) {
+            return a - b;
+        });
+        alert("数值排序后的数组：" + numericSortedArray);
+    }
+</script>
+
+</body>
+</html>

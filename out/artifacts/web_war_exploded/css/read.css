@@ -1,0 +1,57 @@
+
+#fff dd {
+    float: left;
+    padding-right: 18px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    font-weight: 400;
+
+}
+.new_title {
+    zoom: 1;
+    overflow: hidden;
+    padding: 16px 0 16px 18px;
+    background-color: #f6f6f6;
+}
+.new_title.even {
+    background: #e9e7e6;
+}
+a {
+    text-decoration: none;
+}
+small{
+    font-size: 14px;
+
+}
+#ttt span {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; /* 限制显示的行数为一行 */
+    font-size: 20px;
+    color: #222;
+    margin-top: 0; /* 调整顶部间距 */
+}
+
+#ttt p.limitTip {
+    margin-top: 0; /* 如果需要去掉顶部间距，可以调整这个值 */
+}
+
+#ttt p {
+    font-size: 12px;
+    color: #888;
+    margin-top: -20px;
+}
+#ft a{
+    color: #012;
+    white-space: nowrap;
+}
+.ellipsis-text {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

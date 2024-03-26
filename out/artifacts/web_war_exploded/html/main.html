@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="jquery.js"></script>
+
+    <title>好价书屋</title>
+    <style>
+        .w {
+            width: 900px;
+            margin: 0 auto;
+            clear: both;
+        }
+
+        .s {
+            width: 1500px;
+            margin: 0 auto;
+        }
+
+        .ww {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .head {
+            width: 1456px;
+            height: 180px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .logo{
+            width: 272px;
+            height: 180px;
+            float: left;
+        }
+        .biaoti {
+            height: 180px;
+            width: 900px;
+            float: left;
+        }
+
+        .yonghu {
+            height: 120px;
+            width: 120px;
+            float: left;
+        }
+
+        .yonghu a {
+            border: 0px;
+            text-align: center;
+            line-height: 60px;
+            height: 60px;
+            width: 60px;
+            float: left;
+            text-decoration: none;
+        }
+        .yonghu b {
+            border: 0px;
+            text-align: center;
+            line-height: 60px;
+            height: 60px;
+            width: 120px;
+            float: left;
+            text-decoration: none;
+        }
+
+        .fenlei {
+            width: 150px;
+            height: 280px;
+            left: 100px;
+            bottom: 50px;
+            float: left;
+            z-index: -999;
+            background-color: rgb(253,244,232);
+        }
+
+        .fenlei1 {
+            width: 150px;
+            height: 30px;
+        }
+
+        .fenlei a {
+            border: 0px;
+            text-align: center;
+            line-height: 50px;
+           color: #0a53be;
+            height: 50px;
+            float: left;
+            text-decoration: none;
+        }
+
+        .zuoguang {
+            width: 900px;
+            z-index: 999;
+            left: 30px;
+        }
+
+        ul>li {
+            padding: 5px;
+            text-align: left;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        ul>li:hover {
+            cursor: pointer;
+        }
+
+        ul>li:nth-child(-n+3) span {
+            background-color: crimson;
+        }
+
+        ul>li>span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            line-height: 20px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        /* 父元素清除浮动 */
+        .content {
+            overflow: hidden;
+            padding: 5px;
+            display: none;
+        }
+
+        .content>img {
+            height: 80px;
+            float: left;
+        }
+
+        .content img {
+
+            transition: transform 0.3s ease;
+            /* 添加过渡效果 */
+
+        }
+
+        .content:hover img {
+
+            transform: scale(1.1);
+            /* 图片放大1.1倍 */
+
+        }
+
+        .content>p {
+            width: 800px;
+        }
+
+        .current .content {
+            display: block;
+        }
+
+        /*.zongti {*/
+        /*    width: 1456;*/
+
+        /*}*/
+
+        .zuo {
+            width: 278px;
+            float: left;
+        }
+
+        .you {
+            width: 278px;
+            height: 100%;
+            float: left;
+        }
+
+        .zhuti {
+            width: 900px;
+            float: left;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .search {
+            display: flex;
+            width: 642px;
+            height: 42px;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+
+        .doahanglan {
+            width: 690px;
+            height: 70px;
+
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .doahanglan a {
+            border: 0px;
+            text-align: center;
+            line-height: 70px;
+            width: 230px;
+            height: 70px;
+            float: left;
+            font-size: 40px;
+            font-family: 隶书;
+            text-decoration: none;
+        }
+
+        .lunbotu {
+
+            width: 900px;
+            height: 400px;
+
+            position: relative;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .diyigetu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 1.5s;
+        }
+
+        .diyigetu:nth-child(1) {
+            opacity: 1;
+        }
+
+
+        .jiantouzuo {
+            width: 35px;
+            height: 70px;
+            color: #ccc;
+            position: absolute;
+            top: 150px;
+            /* 圆角度 */
+            border-radius: 0 5px 5px 0;
+            /* 箭头的调整 */
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+
+        }
+
+        .jiantouzuo:hover {
+            background-color: #00000050;
+            color: #fff;
+
+        }
+
+        .jiantouyou {
+            width: 35px;
+            height: 70px;
+            color: #ccc;
+            position: absolute;
+            top: 150px;
+            /* 圆角度 */
+            border-radius: 0 5px 5px 0;
+            /* 箭头的调整 */
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            right: 0;
+
+        }
+
+        .jiantouyou:hover {
+            background-color: #00000050;
+            color: #fff;
+
+        }
+
+        .diandian>ul {
+            padding: 0;
+            margin: 0;
+            /* 不会出现小圆点 */
+            list-style: none;
+        }
+
+        .diandian li {
+            width: 7px;
+            height: 7px;
+            border-radius: 100%;
+            background-color: #ccc;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .diandian li:hover {
+            background-color: #fff;
+        }
+
+        .diandian li:nth-child(1) {
+            background-color: #fff;
+        }
+
+        .diandian {
+            position: absolute;
+            bottom: 20px;
+            right: 400px;
+        }
+
+        .paihang {
+            width: 900px;
+            margin-top: 5px;
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .rexiaopaihang {
+            width: 900px;
+            height: 40px;
+
+        }
+
+        .paihang1 {
+            width: 100px;
+            height: 40px;
+            float: left;
+
+        }
+
+        .paihang2 {
+            width: 70px;
+            height: 40px;
+            float: right;
+
+        }
+
+        .paihang2 a {
+            text-align: center;
+            display: block;
+            width: 70px;
+            height: 40px;
+            line-height: 40px;
+
+            text-decoration: none;
+        }
+
+        .paihang3 {
+            width: 900px;
+
+        }
+
+        .paihang4 {
+            width: 900px;
+            height: 40px;
+        }
+
+        .zhanshi {
+            width: 180px;
+            height: 280px;
+            margin: 0;
+            padding: 0;
+            border: 0px solid #ccc;
+            float: left;
+        }
+
+        .tupian {
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
+        .tupian img {
+
+            transition: transform 0.3s ease;
+            /* 添加过渡效果 */
+
+        }
+
+        .tupian:hover img {
+
+            transform: scale(1.2);
+            /* 图片放大1.2倍 */
+
+        }
+
+        .fenxiang {
+            width: 900px;
+            margin-top: 5px;
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .haoshufenxiang {
+            width: 900px;
+            height: 40px;
+
+        }
+
+        .fenxiang1 {
+            width: 100px;
+            height: 40px;
+            float: left;
+        }
+
+        .fenxiang2 {
+            width: 70px;
+            height: 40px;
+            float: right;
+
+        }
+
+        .fenxiang2 a {
+            text-align: center;
+            display: block;
+            width: 70px;
+            height: 40px;
+            line-height: 40px;
+
+            text-decoration: none;
+        }
+
+        .fenxiang3 {
+            width: 900px;
+
+        }
+
+        .book1 {
+            width: 150px;
+            float: left;
+        }
+
+        .book1 img {
+
+            transition: transform 0.3s ease;
+            /* 添加过渡效果 */
+
+        }
+
+        .book1:hover img {
+
+            transform: scale(1.2);
+            /* 图片放大1.2倍 */
+
+        }
+
+        .book {
+            width: 900px;
+            height: 200px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .zi1 {
+            width: 750px;
+            height: 140px;
+            float: left;
+            text-align: start;
+        }
+
+        .youguang {
+            top: 180px;
+            right: 35px;
+            z-index: -999;
+        }
+
+        .daohang {
+            float: left;
+            position: fixed;
+            right: 100px;
+            bottom: 250px;
+            z-index: 999;
+        }
+
+        .daohang a {
+            text-align: center;
+            display: block;
+            width: 80px;
+            height: 55px;
+            line-height: 55px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: rgb(246,241,242);
+        }
+
+        #inp {
+            width: 800px;
+            height: 40px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 315px;
+            margin-top: 60px;
+            z-index: 999;
+        }
+
+        .footer .s {
+            display: flex;
+            background-color: #222;
+            justify-content: space-around;
+        }
+
+        .footer .s dl {
+            cursor: pointer;
+        }
+
+        .footer .s dl dt {
+            font-size: 20px;
+            margin-top: 20px;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer .s dl dd {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+
+        .footer .s dl dd:hover {
+            color: #fff;
+        }
+
+        .scrollBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 180px;
+        }
+
+        .scrollBtn1 {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 120px;
+        }
+
+        .scrollBtn2 {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+        .zhanshi h3{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .zhanshi  h5{
+            font-weight: bold;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="../tool/jquery-messager/jquery.fix-messager.css">
+    <script src="../tool/jquery-messager/jquery.fix-messager.js"></script>
+    <script src="../js/js.cookie-2.2.1.min.js"></script>
+    <script src="../js/mian.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+</head>
+
+<body background="../img/背景图副本.png"
+    style=" background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+
+    <div  class="container-md zongti">
+        <div class="head">
+            <div class="logo"> <img src="../img/logo.png" style="height: 180px"></div>
+            <div class="ww">
+                <div class="biaoti" id="好价书屋"><img src="../img/好价书屋.png" style="height:180px; width: 900px;">
+                </div>
+            </div>
+            <div class="yonghu">
+                <a id="login" href="login/login.html"  class="btn btn-outline-primary">登录</a>
+                <a href="login/signup.html" class="btn btn-outline-primary">注册</a>
+                <b href="" class="btn btn-outline-primary" >购物车</b>
+
+            </div>
+        </div>
+
+        <div class="zuo">
+            <div class="fenlei">
+                <div class="fenlei1">分类</div>
+                <a href="classify.html?Theme=novel&&Genre=adventure" class="btn btn-outline-success">冒险</a>
+                <a href="classify.html?Theme=novel&&Genre=romance"  class="btn btn-outline-success">爱情</a>
+                <a href="classify.html?Theme=novel&&Genre=science" class="btn btn-outline-success">科幻</a>
+                <a href="classify.html?Theme=novel&&Genre=reasoning" class="btn btn-outline-success">推理</a>
+                <a href="classify.html?Theme=novel&&Genre=historical" class="btn btn-outline-success">历史</a>
+                <a href="classify.html?Theme=novel&&Genre=literary" class="btn btn-outline-success">文学</a>
+                <a href="classify.html?Theme=popularScienceBooks&&Genre=psychology" class="btn btn-outline-success">心理学</a>
+                <a href="" class="btn btn-outline-success">童书</a>
+                <a href="" class="btn btn-outline-success">悬疑</a>
+                <a href="" class="btn btn-outline-success">人文社科</a>
+            </div>
+        </div>
+        <div class="zhuti">
+            <div class="search">
+                <input type="text" id="inp" placeholder="请输入关键词">
+                <img src="../img/搜索图标.png">
+            </div>
+            <div class="doahanglan">
+                <a href="" class="btn btn-outline-primary">图书</a>
+                <a href="read.html" class="btn btn-outline-primary">电子书</a>
+
+            </div>
+            <div class="lunbotu">
+                <div class="diyigetu"><img src="../img/轮播图1.jpg" width="900" height="400"></div>
+                <div class="diyigetu"><img src="../img/轮播图2.jpg" width="900" height="400"></div>
+                <div class="diyigetu"><img src="../img/轮播图4.jpg" width="900" height="400"></div>
+                <div class="diyigetu"><img src="../img/轮播图5.jpg" width="900" height="400"></div>
+                <div class="diyigetu"><img src="../img/轮播图6.jpg" width="900" height="400"></div>
+                <div class="jiantouzuo">&lt;</div>
+                <div class="jiantouyou">&gt;</div>
+                <div class="diandian">
+                    <ul>
+                        <li class="baidian"></li>
+                        <li class="baidian"></li>
+                        <li class="baidian"></li>
+                        <li class="baidian"></li>
+                        <li class="baidian"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="zuoguang">
+                <h2>畅销图书排行榜</h2>
+                <ul>
+                    <li>
+                        <span>1</span><a href="bookcontain.html?BookID=248">红楼梦</a>
+                        <div class="content">
+                            <img src="../img/novel/literary/23.png">
+                            <p>《红楼梦》是一部执著的书。”《红楼梦》真正激动人心的是它对人生的执着，对爱情的执着，对是非的执着，对现实的执着……
+                                一句话，对自己个性的执着，对自己理想的执着。
+                                这是对贾宝玉、林黛玉对爱情的执着的深刻的解释，这也是对《红楼梦》、对曹雪芹的执着的较好的解释。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>2</span><a href="bookcontain.html?BookID=253">三国演义</a>
+                        <div class="content">
+                            <img src="../img/novel/literary/26.png">
+                            <p>通过对经典的价值阅读，树立学生正确的价值观，培养一生有用的品质 读三国演义培养进取、忠诚、承担的品种</p>
+
+                        </div>
+                    </li>
+                    <li>
+                        <span>3</span><a href="bookcontain.html?BookID=258">水浒传</a>
+                        <div class="content">
+                            <img src="../img/novel/literary/27.png">
+                            <p>《水浒传》是一部是一部有审美价值和社会意义的中国优秀长篇小说。自问世以来倍受文人的称赞，
+                                也为广大人民群众所喜爱。有人说： 别一部书，看过一遍既休。独有《水浒传》只是看不厌。无非为他把一百八人性格都写出来。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>4</span><a href="bookcontain.html?BookID=264">西游记</a>
+                        <div class="content">
+                            <img src="../img/novel/literary/29.png">
+                            <p>《西游记》以丰富奇特的艺术想象、生动曲折的故事情节、鲜活生动的艺术形象、幽默诙谐的语言构成了它卓越的艺术成就。其中，艺术形象和语言为突出。
+                                它成功塑造了孙悟空、猪八戒、沙和尚、牛魔王等集人性、神性和动物性特征于一体的艺术形象，使得这些艺术形象深入人心。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="paihang">
+                <div class="rexiaopaihang" id="喜好推荐">
+                    <div class="paihang4">
+                        <div class="paihang1">
+                            <span align="center" style="line-height: 40px; font-size: 22px;">喜好推荐</span>
+                        </div>
+                        <div class="paihang2">
+                            <a href="">更多</a>
+                        </div>
+                    </div>
+                    <div class="paihang3">
+                        <div class="zhanshi">
+                            <div class="tupian"><a href="bookcontain.html?BookID=249"><img src="../img/novel/literary/24.png" height="180" alt="活着"></a>
+                            </div>
+                            <h5>活着</h5>
+                            <h3 style="color: red;">￥29.00</h3>
+                        </div>
+                        <div class="zhanshi">
+                            <div class="tupian"><a href="bookcontain.html?BookID=260"><img src="../img/popularScienceBooks/self-helpGrowth/24.png" height="180" alt="天才在左，疯子在右"></a>
+                            </div>
+                            <h5>天才在左，疯子在右</h5>
+                            <h3 style="color: red;">￥32.00</h3>
+                        </div>
+                        <div class="zhanshi">
+                            <div class="tupian"><a href="bookcontain.html?BookID=268"> <img src="../img/novel/romance/24.png" height="180" alt="追风筝的人"></a></div></a>
+                            <h5>追风筝的人</h5>
+                            <h3 style="color: red;">￥37.00</h3>
+                        </div>
+                        <div class="zhanshi">
+                            <div class="tupian"><a href="bookcontain.html?BookID=252"><img src="../img/novel/romance/22.png" height="180" alt="平凡的世界"></a></div></a>
+                            <h5>平凡的世界</h5>
+                            <h3 style="color: red;">￥69.00</h3>
+                        </div>
+                        <div class="zhanshi">
+                            <div class="tupian"><a href="bookcontain.html?BookID=250"><img src="../img/novel/romance/21.png" height="180" alt="解忧杂货店"></a></div></a>
+                            <h5>解忧杂货店</h5>
+                            <h3 style="color: red;">￥28.00</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fenxiang">
+                <div class="haoshufenxiang" id="好书分享">
+                    <div class="fenxiang1">
+                        <span align="center" style="line-height: 40px; font-size: 22px;">好书分享</span>
+                    </div>
+                    <div class="fenxiang2">
+                        <a href="classify.html">更多</a>
+                    </div>
+                </div>
+                <div class="fenxiang3">
+                    <div class="book">
+                        <div class="book1">
+                            <a href="bookcontain.html?BookID=257"><img src="../img/popularScienceBooks/self-helpGrowth/22.png" width="120px"></a>
+                        </div>
+                        <div class="zi1">
+                            <p>作者：史蒂芬·霍金</p>
+                            <p>出版社：湖南科技出版社</p>
+                            <P>价格：￥33.00</P>
+                            <p>简介：全书共十二章，讲述了关于宇宙本性的最前沿知识，包括：我们的宇宙图像、空间和时间、膨胀的宇宙、不确定性原理、黑洞、宇宙的起源和命运等内容，
+                                深入浅出地介绍了遥远星系、黑洞、粒子、反物质等知识，并对宇宙的起源、空间和时间以及相对论等古老命题进行了阐述。</p>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <div class="book1"><a href="bookcontain.html?BookID=245"><img src="../img/novel/adventure/21.png" width="120px"></a></div>
+                        <div class="zi1">
+                            <p>作者：克莱儿·麦克福尔；付强&nbsp;译</p>
+                            <p>出版社：百花洲文艺出版社</p>
+                            <P>价格：￥22.00</P>
+                            <p>简介：《摆渡人》是英国作家克莱儿·麦克福尔（Claire Mcfall）创作的小说，
+                                作者从少年人的角度洞悉人性的温情，通过男女主人公的所见所感，道出所有人对亲情、友情和爱情终极幸福的向往</p>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <div class="book1"><a href="bookcontain.html?BookID=251"><img src="../img/novel/literary/25.png" width="120px"> </a></div>
+                        <div class="zi1">
+                            <p>作者：老舍</p>
+                            <p>出版社：人民文学出版社</p>
+                            <P>价格：25.90</P>
+                            <p>简介：《骆驼祥子》以旧北平为背景，描写了一个外号“骆驼”名叫祥子的人力车夫的悲惨遭遇，
+                                反映了生活在城市最底层的广大劳动人民的痛苦，暴露了旧社会的罪恶。</p>
+                        </div>
+                    </div>
+
+
+                    <div class="book">
+                        <div class="book1"><a href="bookcontain.html?BookID=265"><img src="../img/children/fairy/21.png" width="120px"></a></div>
+                        <div class="zi1">
+                            <p>作者：圣-埃克苏佩里著；梅思繁&nbsp;译</p>
+                            <p>出版社：辽宁少年儿童出版社</p>
+                            <P>价格：￥14.90</P>
+                            <p>简介：该书的主人公是来自外星球的小王子。书中以一位飞行员作为故事叙述者，讲述了小王子从自己星球出发前往地球的过程中，所经历的各种历险。
+                                作者以小王子的孩子式的眼光，透视出成人的空虚、盲目，愚妄和死板教条，用浅显天真的语言写出了人类的孤独寂寞、没有根基随风流浪的命运。
+                                同时，也表达出作者对金钱关系的批判，对真善美的讴歌。</p>
+                        </div>
+                    </div>
+
+
+                    <div class="book">
+                        <div class="book1"><a href="bookcontain.html?BookID=246"> <img src="../img/novel/literary/22.png" width="120px"></a></div>
+                        <div class="zi1">
+                            <p>作者：林海音</p>
+                            <p>出版社：人民文学出版社</p>
+                            <P>价格：25.90</P>
+                            <p>简介：该作品中描写20世纪20年代，北京城南一座四合院里，住着英子温暖和睦的一家。
+                                它透过主角英子童稚的双眼，向世人展现了大人世界的悲欢离合，有一种说不出来的天真，却道尽人世复杂的情感。
+                                小说将小英子童年经历的五个故事集合在一起。
+                                是作者内心创作情感的表露与寄托，以不断的“离去”来组织情节，推动故事的发展。
+                                反映了作者对童年的怀念和对北京城南的思念。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="s">
+            <dl>
+                <dt>合作伙伴</dt>
+                <dd>XXXX</dd>
+                <dd>XXXX</dd>
+                <dd>XXXX</dd>
+                <dd>XXXX</dd>
+            </dl>
+            <dl>
+                <dt>关于我们</dt>
+                <dd>管理团队</dd>
+                <dd>客户服务</dd>
+                <dd>帮助</dd>
+            </dl>
+            <dl>
+                <dt>联系方式</dt>
+                <dd>微博:</dd>
+                <dd>邮件:20210201234@qq.com</dd>
+                <dd>地址：XXXXXXXX</dd>
+            </dl>
+        </div>
+    </div>
+
+    <body>
+
+        <!-- Your page content goes here -->
+
+        <button id="backToTopBtn" class="scrollBtn" onclick="scrollToTop()">返回顶部</button>
+        <button id="shareBtn" class="scrollBtn1" onclick="share()">好书分享</button>
+        <button id="favoriteBtn" class="scrollBtn2" onclick="favorite()">喜好推荐</button>
+
+        <script>
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                    document.getElementById("backToTopBtn").style.display = "block";
+                    document.getElementById("shareBtn").style.display = "block";
+                    document.getElementById("favoriteBtn").style.display = "block";
+                } else {
+                    document.getElementById("backToTopBtn").style.display = "none";
+                    document.getElementById("shareBtn").style.display = "none";
+                    document.getElementById("favoriteBtn").style.display = "none";
+                }
+            }
+
+            function scrollToTop() {
+                document.getElementById('好价书屋').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function share() {
+                document.getElementById('好书分享').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function favorite() {
+                document.getElementById('喜好推荐').scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+
+    </body>
+    <script>
+        $(function () {
+            //监听li的移入事件
+            $("li").mousemove(function () {
+                $(this).addClass("current")
+            })
+            //监听li的移出事件
+            $("li").mouseout(function () {
+                $(this).removeClass("current")
+            })
+        });
+        $(function () {
+            var index = 0;//标记当前图片索引
+            dingshiqi();
+            var f;
+            function dingshiqi() {
+                f = setInterval(function () {
+                    if (index == $(".diyigetu").length - 1) {
+                        index = 0;
+                        $(".diyigetu").css("opacity", "0");
+                        $(".diyigetu").eq(index).css("opacity", "1");
+                        $(".baidian").css("background-color", "#ccc");
+                        $(".baidian").eq(index).css("background-color", "#fff");
+                    } else {
+                        index++;
+                        $(".diyigetu").css("opacity", "0");
+                        $(".diyigetu").eq(index).css("opacity", "1");
+                        $(".baidian").css("background-color", "#ccc");
+                        $(".baidian").eq(index).css("background-color", "#fff");
+                    }
+
+                }, 4000)
+            }
+            $(".jiantouzuo").click(function () {
+                clearInterval(f);
+                if (index == 0) {
+                    index = $(".diyigetu").length - 1;
+                    $(".diyigetu").css("opacity", "0");
+                    $(".diyigetu").eq(index).css("opacity", "1");
+                    $(".baidian").css("background-color", "#ccc");
+                    $(".baidian").eq(index).css("background-color", "#fff");
+                    dingshiqi();
+                }
+                else {
+                    index--;
+                    $(".diyigetu").css("opacity", "0");
+                    $(".diyigetu").eq(index).css("opacity", "1");
+                    $(".baidian").css("background-color", "#ccc");
+                    $(".baidian").eq(index).css("background-color", "#fff");
+                    dingshiqi();
+                }
+            })
+
+            $(".jiantouyou").click(function () {
+                clearInterval(f);
+                if (index == $(".diyigetu").length - 1) {
+                    index = 0;
+                    $(".diyigetu").css("opacity", "0");
+                    $(".diyigetu").eq(index).css("opacity", "1");
+                    $(".baidian").css("background-color", "#ccc");
+                    $(".baidian").eq(index).css("background-color", "#fff");
+                    dingshiqi();
+                }
+                else {
+                    index++;
+                    $(".diyigetu").css("opacity", "0");
+                    $(".diyigetu").eq(index).css("opacity", "1");
+                    $(".baidian").css("background-color", "#ccc");
+                    $(".baidian").eq(index).css("background-color", "#fff");
+                    dingshiqi();
+                }
+            })
+            $(".baidian").click(function () {
+                clearInterval(f);
+                var indexx = $(this).index();
+                index = indexx;
+                $(".diyigetu").css("opacity", "0");
+                $(".diyigetu").eq(index).css("opacity", "1");
+                $(".baidian").css("background-color", "#ccc");
+                $(".baidian").eq(index).css("background-color", "#fff");
+                dingshiqi();
+            })
+        })
+    </script>
+</body>
+
+</html>

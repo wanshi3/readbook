@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/js.cookie-2.2.1.min.js"></script>
+    <script src="../../js/bootstrap-table.js"></script>
+    <script src="../../js/bootstrap-table-zh-CN.js"></script>
+    <link rel="stylesheet" href="../../tool/jquery-confirm/jquery-confirm.min.css">
+    <script src="../../tool/jquery-confirm/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="../../tool/jquery-messager/jquery.fix-messager.css">
+    <script src="../../tool/jquery-messager/jquery.fix-messager.js"></script>
+    <link rel="stylesheet" href="../../tool/iconfont/style.css">
+    <script src="admain.js"></script>
+    <script src="book.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <span class="navbar-sidebar-toggle" data-toggle="tooltip" data-placement="right" title="菜单栏收缩或展开"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                <a class="navbar-brand" href="#">后台管理</a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="nav-notifications">
+
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="navbar-dropdownmenu" data-toggle="dropdown">
+                        <img src="./images/avatar-mini.jpg" alt="Admin">
+                        管理员
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="navbar-dropdownmenu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="login.html">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <aside class="sidebar-menu">
+            <div class="separator-50"></div>
+
+            <ul class="menu-list">
+                <li class="menu-item actived">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>首页</a>
+                </li>
+                <li class="separator-20"></li>
+                <li class="menu-item">
+                    <a id="h1" ><i class="fa fa-cube" aria-hidden="true"></i>UI 控件</a>
+                </li>
+                <li class="menu-item">
+                    <a id="2"><i class="fa fa-key" aria-hidden="true"></i>插件应用</a>
+                </li>
+                <li class="menu-item">
+                    <a href="javascript:void(0)"><i class="fa fa-book" aria-hidden="true"></i>其他页面</a>
+                    <ul class="sub-menu-list">
+                        <li class="sub-menu-item"><a href="inbox.html">收件箱</a></li>
+                        <li class="sub-menu-item"><a href="table.html">表格</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="javascript:void(0)"><i class="fa fa-tag" aria-hidden="true"></i>更多页面 <span class="badge">4</span></a>
+                    <ul class="sub-menu-list">
+                        <li class="sub-menu-item"><a href="blank.html">空白页面</a></li>
+                        <li class="sub-menu-item"><a href="login.html">登录页面</a></li>
+                        <li class="sub-menu-item"><a href="jump.html">跳转页面</a></li>
+                        <li class="sub-menu-item"><a href="404.html">404页面</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="javascript:void(0)"><i class="fa fa-list" aria-hidden="true"></i>一级菜单</a>
+                    <ul class="sub-menu-list">
+                        <li class="sub-menu-item"><a href="#">二级菜单-1</a></li>
+                        <li class="sub-menu-item"><a href="#">二级菜单-2</a></li>
+                    </ul>
+                </li>
+
+                <li class="separator-30"></li>
+
+                <li class="menu-item">
+                    <a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i>安全退出</a>
+                </li>
+
+            </ul>
+        </aside>
+
+        <div class="main-container">
+            <!--图书-->
+            <di class="p1">
+                <div class="row ">
+                    <div class="col-2">
+                        <input type="text" class="form-control" id="searchName" placeholder="书名" >
+                    </div>
+                    <div class="col-10" >
+                        <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_search" class="btn btn-outline-primary mb-3"><i class="bi bi-arrow-up-left"></i>查找</button>
+                        <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_insert" class="btn btn-outline-primary mb-3"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-up-left"></i>添加</button>
+                    </div>
+                </div>
+
+                <table class="table table-striped table-hover table-bordered" style="font-size: 18px;background: white" id="tbl_student">
+                </table>
+            </di >
+            <!--                电子书-->
+            <div class="p2" style="display: none ">
+                <div class="row">
+                    <div class="col-2">
+                        <input type="text" class="form-control" id="Bookname" placeholder="电子书名" >
+                    </div>
+                    <div class="col-10" >
+                        <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_search2" class="btn btn-outline-primary mb-3"><i class="bi bi-arrow-up-left"></i>查找</button>
+                        <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_insert2" class="btn btn-outline-primary mb-3"  data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-arrow-up-left"></i>添加</button>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered" style="font-size: 18px;background: white" id="tb_ebook" >
+                </table>
+            </div>
+            <!--                用户-->
+            <div class="p3 " style="display: none ">
+                <div class="row">
+                    <div class="col-2">
+                        <input type="text" class="form-control" id="usernametext" placeholder="用户名或者账户" >
+                    </div>
+                    <div class="col-10" >
+                        <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_search3" class="btn btn-outline-primary mb-3"><i class="bi bi-arrow-up-left"></i>查找</button>
+                        <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_insert3" class="btn btn-outline-primary mb-3"  data-bs-toggle="modal" data-bs-target="#exampleModal3"><i class="bi bi-arrow-up-left"></i>添加</button>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered" style="font-size: 18px;background: white" id="tb_user" >
+                </table>
+            </div>
+            <div class="p4">
+
+            </div>
+            <div class="p5">
+
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p>1305884545@qq.com 万春 版权所有</p>
+        </footer>
+    </div>
+<script src="./assets/jquery/jquery-3.1.1.min.js"></script>
+<script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="./assets/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="./assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

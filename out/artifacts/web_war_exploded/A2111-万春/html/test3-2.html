@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var body = document.querySelector('body');
+        var r_h = (prompt("请输入半径r和高度(用空格隔开)")).split(' ');
+        var r = parseFloat(r_h[0]); // 使用parseFloat将输入转换为浮点数
+        var h = parseFloat(r_h[1]); // 同样地，将第二个输入转换为浮点数
+        body.innerHTML += ('<p>半径r为:' + r + '</p>');
+        body.innerHTML += ('<p>高度h为:' + h + '</p>');
+        var C = parseInt(Math.PI * r * 2); // 圆周长
+        body.innerHTML += ('<p>半径r为的' + r + '的圆周长约为:' + C + '</p>');
+        var S = parseInt(Math.PI * r * r); // 圆面积
+        body.innerHTML += ('<p>半径r为的' + r + '的圆面积约为:' + S + '</p>');
+        var V_1 = parseInt(Math.PI * r * r * r * 4 / 3); // 球体积
+        body.innerHTML += ('<p>半径r为的' + r + '的球体积约为:' + V_1 + '</p>');
+        var V_2 = parseInt(Math.PI * r * r * h / 3); // 圆锥体积
+        body.innerHTML += ('<p>半径r为' + r + '高为' + h + '的圆锥体积约为:' + V_2 + '</p>');
+    };
+</script>
+
+
+</body>
+</html>

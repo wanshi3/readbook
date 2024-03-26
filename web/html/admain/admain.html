@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/js.cookie-2.2.1.min.js"></script>
+    <script src="../../js/bootstrap-table.js"></script>
+    <script src="../../js/bootstrap-table-zh-CN.js"></script>
+    <link rel="stylesheet" href="../../tool/jquery-confirm/jquery-confirm.min.css">
+    <script src="../../tool/jquery-confirm/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="../../tool/jquery-messager/jquery.fix-messager.css">
+    <script src="../../tool/jquery-messager/jquery.fix-messager.js"></script>
+    <link rel="stylesheet" href="../../tool/iconfont/style.css">
+    <script src="admain.js"></script>
+    <script src="book.js"></script>
+    <script src="ebook.js"></script>
+    <link rel="stylesheet" type="text/css" href="JoynBackground.css"/>
+    <script type="text/javascript" src="JoynBackground.js"></script>
+    <script src="user.js"></script>
+    <script>
+        $(document).ready(function(){
+             JoynBackground(1,10000); //场景动画类型和时间
+            /* 场景动画类型：【1】拉近【2】拉远【3】幻灯片显示 */
+        })
+    </script>
+
+
+    <!--    <style>-->
+<!--        #zhushi{ background-image: url(del.png); text-align: center; margin: 300px auto; padding: 20px; width: 60%; border-radius: 30px; }-->
+<!--    </style>-->
+<!--        #canvas{-->
+<!--            position: absolute;-->
+<!--            top: 0;-->
+<!--            left: 0;-->
+<!--            z-index: -1;-->
+<!--        }-->
+<!--        /*body {*/-->
+<!--        /*    overflow: hidden;*/-->
+<!--        /*}*/-->
+<!--        /*canvas{ background: #0c0c0c; }*/-->
+<!--    </style>-->
+
+
+</head>
+<body>
+
+    <header>
+    <!-- 导航栏-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid .translate-middle">
+            <a class="navbar-brand" href="#">
+                <img src="../../img/logo.png" style="width: 100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex column-gap-3 bs-tertiary-bg position-relative" id="navbarScroll">
+
+                <ul class="navbar-nav fs-6  navbar-nav-scroll position-absolute bottom-0 end-0" style="--bs-scroll-height: 90px;">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person"></i>
+                            我的账户
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item btn btn-danger"href="login/login.html">登入账户</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" id="Regist_start_" href="login/signup.html">注册账户</a></li>
+                            <li><a class="dropdown-item" id="back" href="#">退出登入</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 text-left" style="height: 110rem;">
+                <button class="btn" style=";color: #b9bfc7;font-size: 20px;margin-top: 40px" id="h1">图书管理</button>
+                <button class="btn" style=";color: #b9bfc7;font-size: 20px;margin-top: 20px" id="h2">电子书管理</button>
+                <button class="btn" style=";color: #b9bfc7;font-size: 20px;margin-top: 20px" id="h3">用户管理</button>
+                <button class="btn" style=";color: #b9bfc7;font-size: 20px;margin-top: 20px" id="h4">论坛管理</button>
+                <button class="btn" style=";color: #b9bfc7;font-size: 20px;margin-top: 20px" id="h5">订单管理</button>
+
+            </div>
+
+
+                <!--图书-->
+                <di class="p1 col-10">
+                    <div class="row ">
+                        <div class="col-2">
+                            <input type="text" class="form-control" id="searchName" placeholder="书名" >
+                        </div>
+                        <div class="col-10" >
+                            <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_search" class="btn btn-outline-primary mb-3"><i class="bi bi-arrow-up-left"></i>查找</button>
+                            <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_insert" class="btn btn-outline-primary mb-3"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-up-left"></i>添加</button>
+                        </div>
+                    </div>
+
+                    <table class="table table-striped table-hover table-bordered" style="font-size: 18px;background: white" id="tbl_student">
+                    </table>
+                </di >
+<!--                电子书-->
+                <div class="p2 col-10" style="display: none ">
+                    <div class="row">
+                        <div class="col-2">
+                            <input type="text" class="form-control" id="Bookname" placeholder="电子书名" >
+                        </div>
+                        <div class="col-10" >
+                            <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_search2" class="btn btn-outline-primary mb-3"><i class="bi bi-arrow-up-left"></i>查找</button>
+                            <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_insert2" class="btn btn-outline-primary mb-3"  data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-arrow-up-left"></i>添加</button>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover table-bordered" style="font-size: 18px;background: white" id="tb_ebook" >
+                    </table>
+                </div>
+<!--                用户-->
+                <div class="p3 col-10" style="display: none ">
+                    <div class="row">
+                        <div class="col-2">
+                            <input type="text" class="form-control" id="usernametext" placeholder="用户名或者账户" >
+                        </div>
+                        <div class="col-10" >
+                            <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_search3" class="btn btn-outline-primary mb-3"><i class="bi bi-arrow-up-left"></i>查找</button>
+                            <button type="button" style=";color: #b9bfc7;font-size: 20px;" id="btn_insert3" class="btn btn-outline-primary mb-3"  data-bs-toggle="modal" data-bs-target="#exampleModal3"><i class="bi bi-arrow-up-left"></i>添加</button>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover table-bordered" style="font-size: 18px;background: white" id="tb_user" >
+                    </table>
+                </div>
+                <div class="p4">
+
+                </div>
+                <div class="p5">
+
+                </div>
+        </div>
+
+    </div>
+    <!-- 图书Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="studentEdit">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="studentEditLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <input type="hidden" class="form-control" id="studentEdit_id" name="id">
+
+                <div class="modal-body">
+                    <div clas s="container text-center">
+                        <div class="col-6">
+                            <input type="hidden" id="bookID" class="form-control" name="bookID">
+                        </div>
+                        <form id="fm_studentEdit">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <input type="text" id="Title" class="form-control" name="Title" placeholder="书名">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Author" class="form-control" name="Author" placeholder="作者">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="Price" name="Price" placeholder="价格">
+                                </div>
+                                <div class="col-6">
+                                    <input type="date" class="form-control" id="PublicationYear" name="PublicationYear" placeholder="出版日期">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="Theme" name="Theme" placeholder="主题">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="Genre" name="Genre" placeholder="类别">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="InStock" name="InStock" placeholder="库存">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="Picture" name="Picture" placeholder="图片路径">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" id="btn_studentEdit_save" class="btn btn-primary btn_studentEdit_save">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 电子书Modal-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="studentEdit2">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="studentEditLabel2"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <input type="hidden" class="form-control" id="studentEdit_id2" name="id">
+
+                <div class="modal-body">
+                    <div clas s="container text-center">
+                        <div class="col-6">
+                            <input type="hidden" id="ebookID" class="form-control" name="ebookID" placeholder="id">
+                        </div>
+                        <form id="ebookfrom">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <input type="text" id="eTitle" class="form-control" name="Title" placeholder="电子书名">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="eViews" class="form-control" name="Views" placeholder="浏览次数">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="eAuthor" class="form-control" name="Author" placeholder="作者">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="eTheme" name="Theme" placeholder="主题">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="eGenre" name="Genre" placeholder="类别">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="ePicture" name="Picture" placeholder="图片路径">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" id="btn_ebook_save" class="btn btn-primary btn_studentEdit_save">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 用户Modal-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="studentEdit3">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="studentEditLabel4"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <input type="hidden" class="form-control" id="studentEdit_id3" name="id">
+
+                <div class="modal-body">
+                    <div clas s="container text-center">
+                        <div class="col-6">
+                            <input type="hidden" id="UserID" class="form-control" name="UserID" placeholder="id">
+                        </div>
+                        <form id="userfrom">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <input type="text" id="Name" class="form-control" name="Name" placeholder="用户名">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Username" class="form-control" name="Username" placeholder="账户"disabled>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Password" class="form-control" name="Password" placeholder="密码">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" id="btn_user_save" class="btn btn-primary btn_studentEdit_save">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="JoynBackground">
+        <img src="1.jpg" name="1"/>
+        <img src="2.jpg" name="2"/>
+        <img src="3.jpg" name="3"/>
+    </div>
+
+
+</body>
+</html>
+<!--&lt;!&ndash;                电子书&ndash;&gt;-->
+<
+<!--&lt;!&ndash;                用户&ndash;&gt;-->
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JoynBackground</title>
+<link rel="stylesheet" type="text/css" href="JoynBackground.css"/>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="JoynBackground.js"></script>
+<script>
+$(document).ready(function(){
+	JoynBackground(2,10000); //场景动画类型和时间
+	/* 场景动画类型：【1】拉近【2】拉远【3】幻灯片显示 */
+})
+</script>
+<style>
+#zhushi{ background-image: url(del.png); text-align: center; margin: 300px auto; padding: 20px; width: 60%; border-radius: 30px; }
+</style>
+</head>
+
+<body>
+<div id="zhushi">
+	<h2>JoynBackground</h2><br/><br/>
+    <h1>简易背景</h1>
+    <br/><br/>
+    <p>超简单的背景动画文件，代码就一句，JoynBackground(您需要的效果，速度);</p><br/>
+    <p>只需把图片放在下边的Div中，就可按照您向要的方式展示您的图片。</p><br/>
+    <p>效果包含拉近，拉远，切换……</p>
+</div>
+<!-- 背景[就这么简单] -->
+<div id="JoynBackground">
+	<img src="1.jpg" name="1"/>
+    <img src="2.jpg" name="2"/>
+    <img src="3.jpg" name="3"/>
+</div>
+<!-- 背景 -->
+</body>
+</html>

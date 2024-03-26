@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/Popper.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/contain.css">
+    <script src="../js/contain.js"></script>
+    <script src="../js/js.cookie-2.2.1.min.js"></script>
+    <link rel="stylesheet" href="../tool/jquery-messager/jquery.fix-messager.css">
+    <script src="../tool/jquery-messager/jquery.fix-messager.js"></script>
+    <link rel="stylesheet" href="../tool/jquery-confirm/jquery-confirm.min.css">
+    <script src="../tool/jquery-confirm/jquery-confirm.min.js"></script>
+    <script src="../js/read.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- 导航栏-->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(254,253,252);">
+                <div class="container-fluid .translate-middle">
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/222.jpg" class="" style="width: 230px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex column-gap-3 bs-tertiary-bg" id="navbarScroll">
+                        <ul class="navbar-nav navbar-nav-scroll fs-2" style="--bs-scroll-height: 90px;">
+                            <li class="nav-item">
+                                <a class="nav-link active " aria-current="page" href="main.html">图书</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="read.html">电子书</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex col-3 me-auto m-auto" style="--bs-scroll-height: 90px;" role="search">
+                            <input class="form-control " type="search" placeholder="热门图书" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                        <ul class="navbar-nav fs-6  navbar-nav-scroll " style="--bs-scroll-height: 90px;">
+
+                            <li class="nav-item">
+                                <a class="btn btn-outline-info" href="#">
+                                    <i class="bi bi-bookshelf"></i>
+                                    我的书架
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle me-0" id="me" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person"></i>
+                                    我的账户
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item btn btn-danger"href="login/login.html">登入账户</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" id="Regist_start_" href="login/signup.html">注册账户</a></li>
+                                    <li><a class="dropdown-item" id="res" href="#">退出登入</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <div class="row">
+            <div class="col-4">
+                <div  style="margin-top: 10px;margin-left: 40px">
+                    <img src="../img/xiaoshuo/1.jpg" id="p1" style="width: 200px">
+                </div>
+                 <button class="btn" style="margin-left: 80px;margin-top:20px;background:white">点击阅读</button>
+            </div>
+            <div class="col-3" style="margin-left: -80px">
+                <div class="card-body">
+                    书名:<h5 id="title">红楼梦</h5>
+                    日期：<span id="publicationYear">2002-1-1</span><br>
+                    <p style="color: red;font-size: 25px" id="price"> ￥20.00</p> <!-- Added price -->
+                    <div class="quantity" style="display: flex;">
+                        <button class="minus-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="text" id="quantity-input" value="1" width="20px" readonly>
+                        <button class="plus-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button class="btn btn-danger" id="bug">购买</button>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="myapp-score" >评分<span><h1 id="averrating">9.8</h1></span>
+                    <div id="demo3"></div>
+                    <div class="myapp-tip">
+                        <span id="tip3" class="lq-score-tip"></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="commentbox">
+            <textarea cols="80" rows="50" placeholder="来说几句吧......" class="mytextarea" id="content"></textarea>
+            <div   id="comment" style="text-align: right"  > <button type="button" class="btn btn-primary active" > 评论</button> </div>
+        </div>
+        <div class="comment-list">
+    </div>
+
+
+
+        <script>
+            var BookID="";
+            var Rating=-1;
+            var UserID=""
+            var Name=""
+            Name=Cookies.get("name")
+            UserID = Cookies.get("userID")
+            console.log(UserID)
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get("BookID")!=null)
+            {
+                BookID =urlParams.get("BookID")
+                // console.log(BookID)
+                // alert(BookID)
+            }
+            function decreaseQuantity() {
+                var quantityInput = document.getElementById('quantity-input');
+                var quantity = parseInt(quantityInput.value);
+
+                if (quantity > 1) {
+                    quantity--;
+                }
+
+                quantityInput.value = quantity;
+            }
+
+            function increaseQuantity() {
+                var quantityInput = document.getElementById('quantity-input');
+                var quantity = parseInt(quantityInput.value);
+
+                quantity++;
+
+                quantityInput.value = quantity;
+            }
+
+            $(function() {
+
+                $("#demo3").lqScore({
+                    callBack: function (score, ele) {
+                        Rating=score
+                    },
+                    $tipEle: $("#tip3"), //提示必须要指定显示的元素，显示样式由你自己定义，如果你不擅长css，可以使用demo中的样式
+                    tips: ["不推荐", "一般", "不错", "很棒", "极力推荐！"],
+                    zeroTip: "未评分"
+
+                });
+                //初始化数据
+                var book=" ";
+                var number=0;
+                var price=0
+                var forData={"BookID":5}
+                forData["BookID"]=BookID
+                // const urlParams = new URLSearchParams(window.location.search);
+                // forData["Theme"] =urlParams.get("Theme")
+                // forData["Genre"] =urlParams.get("Genre")
+                $.ajax({
+                    // URL
+                    url: 'http://localhost:8080/web_war_exploded/com/demo/controller/review/Get',
+                    // 参数
+                    data: forData,
+                    // 请求类型
+                    type: 'POST',
+                    // 期望的返回数据类型，请根据实际情况修改
+                    dataType: 'json',
+                    success: function (data) {
+                        // console.log(data.rows[0].user.name)
+                        //
+                        //
+                        // console.log(data)
+                        if (data.total>=1)
+                        {
+                            document.getElementById("p1").src=".."+data.rows[0].book.picture;
+                            book=data.rows[0].book.title;
+                            $("#title").html(data.rows[0].book.title);
+                            $("#price").html("￥"+data.rows[0].book.price);
+                            price =data.rows[0].book.price;
+                            $("#publicationYear").html(data.rows[0].book.publicationYear);
+                        }
+
+                        var averrating=0
+                        var arr2=[];
+                        for(var i=0;i<data.total;i++)
+                        {
+                            averrating+=data.rows[i].rating
+                            var obj = new Object();
+                            obj.img="../img/t"+i+".jpg";
+                            obj.replyName=data.rows[i].user.name;
+                            obj.content=data.rows[i].comment;
+                            obj.time = data.rows[i].reviewDate
+                            obj.replyBody="";
+                            arr2.push(obj)
+                            // arr[i].content=data.rows[i].comment;
+                            // arr[i].content=data.rows[i].book.comment
+                        }
+                        $("#averrating").text((averrating/data.total/2).toFixed(1))
+                        $(".comment-list").addCommentList({data:arr2,add:""});
+                        console.log(data)
+                    },
+                    timeout:2000,
+                    error:function (){
+                        alert("网络延迟")
+
+                    }
+                });
+                $("#bug").click(function (){
+                    // 创建一个 Date 对象，它将包含当前的日期和时间
+                    let currentDate = new Date();
+                    let currentYear = currentDate.getFullYear();
+                    let currentMonth = currentDate.getMonth() + 1; // 月份从0开始，需要加1
+                    let currentDay = currentDate.getDate();
+                    let formattedDate = `${currentYear}-${currentMonth < 10 ? '0' : ''}${currentMonth}-${currentDay < 10 ? '0' : ''}${currentDay}`;
+
+                    number=$("#quantity-input").val()
+                    datas={BookID:"",UserID:"",CreatedTime:"",TotalAmout:"",OrderQuantity:""}
+                    datas.BookID=BookID
+                    if (typeof Cookies.get("userID") == 'undefined')
+                    {
+                        alert("请登入后再操作")
+                        return
+                    }
+                    datas.UserID=UserID
+
+                    datas.CreatedTime=formattedDate
+                    datas.OrderQuantity=number
+                    datas.TotalAmout=number*price
+                    $.confirm({
+                        title: '提示',
+                        content: '确定要购买' + book + '*'+number+'吗？</br>'+'总金额为：'+number*price+'￥',
+                        buttons: {
+                            formSubmit: {
+                                text: '确定',
+                                btnClass: 'btn-red',
+                                action: function () {
+                                    $.ajax({
+                                        // URL
+                                        url: 'http://localhost:8080/web_war_exploded/com/demo/controller/order2/Insert',
+                                        // 参数
+                                        data: datas,
+                                        // 请求类型
+                                        type: 'POST',
+                                        // 期望的返回数据类型，请根据实际情况修改
+                                        dataType: 'json',
+                                        success: function (data) {
+                                           alert("购买成功")
+                                        },
+                                        timeout:2000,
+                                        error:function (){
+                                            alert("网络延迟")
+
+                                        }
+                                    });
+                                }
+                            },
+                            cancel: {
+                                text: '取消',
+                                btnClass: 'btn-gray',
+                                action: function () {
+                                    // $.showMessage("取消")
+                                }
+                            }
+                        }
+                    });
+                })
+
+            })
+
+            $("#comment").click(function(){
+                if (Rating==-1)
+                {alert("请给这本书评分一下");
+                return;
+                }
+
+                // 创建一个 Date 对象，它将包含当前的日期和时间
+                let currentDate = new Date();
+                let currentYear = currentDate.getFullYear();
+                let currentMonth = currentDate.getMonth() + 1; // 月份从0开始，需要加1
+                let currentDay = currentDate.getDate();
+                let formattedDate = `${currentYear}-${currentMonth < 10 ? '0' : ''}${currentMonth}-${currentDay < 10 ? '0' : ''}${currentDay}`;
+
+
+                var forData={"BookID":5,"UserID":4,"Comment":"sdadasd","Rating":5,"ReviewDate":"2021-2-3"}
+                forData.Comment=$("#content").val()
+                forData.UserID=UserID
+                forData.BookID=BookID
+                forData.Rating=Rating*2
+                forData.ReviewDate=formattedDate
+                $.ajax({
+                    // URL
+                    url: 'http://localhost:8080/web_war_exploded/com/demo/controller/review/Insert',
+                    // 参数
+                    data: forData,
+                    // 请求类型
+                    type: 'POST',
+                    // 期望的返回数据类型，请根据实际情况修改
+                    dataType: 'json',
+                    success: function (data) {
+                        var obj = new Object();
+                        obj.img="../img/t1.jpg";
+                        obj.replyName=Name;
+                        obj.content=$("#content").val();
+                        obj.time=formattedDate
+                        obj.replyBody="";
+                        $(".comment-list").addCommentList({data:[],add:obj});
+                    },
+                    timeout:2000,
+                    error:function (){
+                        alert("网络延迟")
+
+                    }
+                });
+
+
+            })
+        </script>
+
+</body>
+</html>

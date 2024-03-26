@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双色球随机程序</title>
+    <style>
+        .ball {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 5px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        .red { background-color: red; color: white; }
+        .blue { background-color: blue; color: white; }
+    </style>
+</head>
+<body>
+<h1>双色球随机程序</h1>
+<div id="result">
+    <div class="ball red" id="red1"></div>
+    <div class="ball red" id="red2"></div>
+    <div class="ball red" id="red3"></div>
+    <div class="ball red" id="red4"></div>
+    <div class="ball red" id="red5"></div>
+    <div class="ball red" id="red6"></div>
+    <div class="ball blue" id="blue"></div>
+</div>
+<button onclick="generateRandomNumbers()">重选</button>
+
+<script>
+    function generateRandomNumbers() {
+        // 生成随机的红球号码（1\~33）
+        let redBalls = [];
+        while (redBalls.length < 6) {
+            let randomNum = Math.floor(Math.random() * 33) + 1;
+            if (!redBalls.includes(randomNum)) {
+                redBalls.push(randomNum);
+            }
+        }
+
+        // 生成随机的蓝球号码（1\~16）
+        let blueBall = Math.floor(Math.random() * 16) + 1;
+
+        // 更新页面显示
+        for (let i = 0; i < 6; i++) {
+            document.getElementById(`red${i + 1}`).innerText = redBalls[i];
+        }
+        document.getElementById('blue').innerText = blueBall;
+    }
+</script>
+</body>
+</html>

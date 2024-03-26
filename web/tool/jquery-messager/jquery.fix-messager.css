@@ -1,0 +1,33 @@
+.jquery-fix-messager {
+	height: 60px;
+	width: 240px; 
+	filter: alpha(opacity = 50);
+	background-color: rgba(36, 36, 36, 0.7);
+	position: fixed;
+	top: 80px;
+	left: 45%;
+	z-index: 99999;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 60px;
+	font: 16px;
+	letter-spacing: 1px;
+	box-shadow: 0 2px 2px rgba(100, 100, 100, .25), inset 0 1px 0 rgba(255, 255, 255, .15);
+	color: #FFFFFF;
+}
+
+.jquery-fix-messager span {
+	font-size: 22px;
+}
+
+.jquery-fix-messager-warning {
+	color: #FF6633;
+}
+
+.jquery-fix-messager-success {
+	color: #009933;
+}
+
+.jquery-fix-messager-error {
+	color: #CC0033;
+}

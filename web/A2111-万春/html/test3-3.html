@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月份天数查询</title>
+</head>
+<body>
+
+<script>
+    // 提示用户输入月份
+    var inputMonth = prompt("请输入月份（1-12）：");
+
+    // 将输入的字符串转换为整数
+    var month = parseInt(inputMonth);
+
+    // 使用 switch 语句判断月份并计算天数
+    var days;
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            days = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            days = 30;
+            break;
+        case 2:
+            // 判断是否是闰年
+            var year = new Date().getFullYear();
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                days = 29;
+            } else {
+                days = 28;
+            }
+            break;
+        default:
+            alert("请输入有效的月份（1-12）！");
+            break;
+    }
+
+    // 在页面中显示结果
+    document.write("<h2>月份：" + month + "</h2>");
+    document.write("<p>该月份有：" + days + "天</p>");
+</script>
+
+</body>
+</html>

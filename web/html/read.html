@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/Popper.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/read.css">
+    <link rel="stylesheet" href="../tool/jquery-messager/jquery.fix-messager.css">
+    <script src="../tool/jquery-messager/jquery.fix-messager.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script src="../js/js.cookie-2.2.1.min.js"></script>
+    <script src="../js/read.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- 导航栏-->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(254,253,252);">
+                <div class="container-fluid .translate-middle">
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/222.jpg" class="" style="width: 230px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex column-gap-3 bs-tertiary-bg" id="navbarScroll">
+                        <ul class="navbar-nav navbar-nav-scroll fs-2" style="--bs-scroll-height: 90px;">
+                            <li class="nav-item">
+                                <a class="nav-link active " aria-current="page" href="main.html">图书</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="read.html">电子书</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex col-3 me-auto m-auto" style="--bs-scroll-height: 90px;" role="search">
+                            <input class="form-control " type="search" placeholder="热门图书" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                        <ul class="navbar-nav fs-6  navbar-nav-scroll " style="--bs-scroll-height: 90px;">
+
+                            <li class="nav-item">
+                                <a class="btn btn-outline-info" href="#">
+                                    <i class="bi bi-bookshelf"></i>
+                                    我的书架
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle me-0" id="me" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person"></i>
+                                   我的账户
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item btn btn-danger"href="login/login.html">登入账户</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" id="Regist_start_" href="login/signup.html">注册账户</a></li>
+                                    <li><a class="dropdown-item" id="res" href="#">退出登入</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner w-100">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="../img/f1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../img/f2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/f3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3 float-start" id="fff" style="margin-right: 20px">
+                <dl class="new_title">
+                    <dt><a>小说类</a></dt>
+                    <dd><a href="classify2.html?Theme=novel&&Genre=romance" class="link-secondary">爱情小说</a></dd>
+                    <dd><a href="classify2.html?Theme=novel&&Genre=adventure" class="link-secondary">冒险小说</a></dd>
+                    <dd><a href="classify2.html?Theme=novel&&Genre=science" class="link-secondary">科幻小说</a></dd>
+                    <dd><a href="classify2.html?Theme=novel&&Genre=reasoning" class="link-secondary">推理小说</a></dd>
+                    <dd><a href="classify2.html?Theme=novel&&Genre=historical " class="link-secondary">历史小说</a></dd>
+                    <dd><a href="classify2.html?Theme=novel&&Genre=literar" class="link-secondary">文学经典</a></dd>
+                </dl>
+                <dl class="new_title even">
+                    <dt><a>科普读物</a></dt>
+                    <dd><a href="classify2.html?Theme=popularScienceBooks&&Genre=self-helpGrowth" class="link-secondary">自助成长</a></dd>
+                    <dd><a href="classify2.html?Theme=popularScienceBooks&&Genre=literaryCriticism" class="link-secondary">历史传记</a></dd>
+                    <dd><a href="classify2.html?Theme=popularScienceBooks&&Genre=historicalBiography" class="link-secondary">文学评价</a></dd>
+                    <dd><a href="classify2.html?Theme=popularScienceBooks&&Genre=psychology" class="link-secondary">心理学</a></dd>
+                    <dd><a href="classify2.html?Theme=popularScienceBooks&&Genre=polittica" class="link-secondary">政治经济</a></dd>
+                </dl>
+                <dl class="new_title">
+                    <dt><a>儿童读物</a></dt>
+                    <dd><a href="classify2.html?Theme=children&&Genre=fairy" class="link-secondary">童话故事</a></dd>
+                    <dd><a href="#" class="link-secondary">绘本</a></dd>
+                    <dd><a href="#" class="link-secondary">成长教育</a></dd>
+                    <dd><a href="#" class="link-secondary">科普启蒙</a></dd>
+                </dl>
+                <dl class="new_title even">
+                    <dt><a>参考书</a></dt>
+                    <dd><a href="#" class="link-secondary">百科全书</a></dd>
+                    <dd><a href="#" class="link-secondary">字典词典</a></dd>
+                    <dd><a href="#" class="link-secondary">地图集</a></dd>
+                    <dd><a href="#" class="link-secondary">学科教材</a></dd>
+                </dl>
+                <dl class="new_title">
+                    <dt><a>艺术与设计</a></dt>
+                    <dd><a href="#" class="link-secondary">绘画艺术</a></dd>
+                    <dd><a href="#" class="link-secondary">音乐舞蹈</a></dd>
+                    <dd><a href="#" class="link-secondary">建筑设计</a></dd>
+                    <dd><a href="#" class="link-secondary">影视艺术</a></dd>
+                </dl>
+                <dl class="new_title even">
+                    <dt><a>生活方式</a></dt>
+                    <dd><a href="#" class="link-secondary">烹饪食谱</a></dd>
+                    <dd><a href="#" class="link-secondary">旅游指南</a></dd>
+                    <dd><a href="#" class="link-secondary">健康养生</a></dd>
+                    <dd><a href="#" class="link-secondary">时尚美容</a></dd>
+                </dl>
+            </div>
+            <div class="col-sm-6" style="margin-left: -22px">
+                <div  style="background: red;width: 90px;margin-left: 2px" ><p style="font-size: 20px;color: white;margin-left: 5px">新品图书</p></div>
+                <table class="table" style="margin-top: 10px" id="ttt">
+                    <tbody>
+                        <tr>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                               <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                                <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                                <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                                <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                                <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                                <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                                <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                            <td class="shadow-sm p-3 mb-5 bg-body rounded">
+                                <a class="p1" target="_blank" href="/products/./1901337753.html" title="半小时漫画西游记(孙悟空的取经路,就是孩子从淘气叛逆到勇于担当的成长路!)混子哥新作(读客半小时漫画文库)">
+                                    <img class="limitImg f1" src="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" data-original="http://img61.ddimg.cn/digital/product/77/53/1901337753_ii_cover.jpg?version=8b124684-ac1a-4f87-8565-4769ad7cd5a5" onerror="this.src='img/book_def_180_260.png'" style="width: 130px">
+                                    <span>
+                                     <p class="limitTip f2" style="font-size: 20px;color: #222;">半小时漫画西游记</p>
+                                </span>
+                                    <span><p class="f3" style="font-size: 12px;color: #888;margin-top: -20px" >陈磊·半小时漫画团队</p></span>
+                                </a>
+                                <i class="bi bi-eye " style="display: inline-block"></i><p style="display: inline-block" class="f4">123</p>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+<!--                <nav aria-label="Page navigation example" style="margin-left: 35px">-->
+<!--                    <ul class="pagination">-->
+<!--                        <li class="page-item" style="margin-left: 165px">-->
+<!--                            <a class="page-link" href="#" aria-label="Previous">-->
+<!--                                <span aria-hidden="true">&laquo;</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+<!--                        <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+<!--                        <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+<!--                        <li class="page-item">-->
+<!--                            <a class="page-link" href="#" aria-label="Next">-->
+<!--                                <span aria-hidden="true">&raquo;</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </nav>-->
+            </div>
+            <div class="col-sm-2" style="margin-left: 95px">
+                <div class="btn-group mx-auto" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info" style="width: 200px;height: 60px;font-size: 32px;color: whitesmoke;background: red">好评榜</button>
+                </div>
+
+                <ul class="border text-start" id="ft" style="font-size: 18px; list-style: none; padding-left: 0;">
+                    <li><span class="ellipsis-text"><i class="bi bi-1-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百werrrrrrrrrrrrewrr万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-2-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-3-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-4-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-5-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-6-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-7-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-8-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                    <li><span class="ellipsis-text"><i class="bi bi-9-circle" style="margin-left: 4px"></i><a class="t2" href="" >邻家的百万富翁</a></span></li>
+                </ul>
+                <img src="../img/l1.jpg" class="img-fluid shadow-none p-3 mb-5 bg-light rounded" style="margin-top: -12px" />
+                <img src="../img/l2.jpg" class="img-fluid shadow-none p-3 mb-5 bg-light rounded" style="margin-top: -45px"/>
+                <img src="../img/l3.jpg" class="img-fluid shadow-none p-3 mb-5 bg-light rounded" style="margin-top: -42px"/>
+            </div>
+        </div>
+
+<!--        <table class="table table-borderless">-->
+<!--            <tbody>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem; height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004523.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>反叛者手记(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004524.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>失语者</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004525.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>星空的暗角</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004526.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>战争中的经济学家：经济学家如何影响世界大战的胜负(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004538.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>奢侈品经济学</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem; height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004523.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>反叛者手记(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004524.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>失语者</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004525.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>星空的暗角</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004526.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>战争中的经济学家：经济学家如何影响世界大战的胜负(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004538.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>奢侈品经济学</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem; height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004523.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>反叛者手记(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004524.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>失语者</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004525.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>星空的暗角</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004526.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>战争中的经济学家：经济学家如何影响世界大战的胜负(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004538.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>奢侈品经济学</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem; height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004523.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>反叛者手记(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004524.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>失语者</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004525.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>星空的暗角</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004526.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>战争中的经济学家：经济学家如何影响世界大战的胜负(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004538.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>奢侈品经济学</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem; height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004523.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>反叛者手记(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004524.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>失语者</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004525.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>星空的暗角</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004526.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>战争中的经济学家：经济学家如何影响世界大战的胜负(epub+azw3+mobi)</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 13rem;height: 20rem">-->
+<!--                        <img src="https://www.zhishikoo.com/wp-content/uploads/2023/12/10004538.jpg" class="card-img-top" alt="...">-->
+<!--                        <small>奢侈品经济学</small>-->
+<!--                    </div>-->
+<!--                </td>-->
+
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--        <div class="btn  btn-outline-success d-grid gap-2 col-6 mx-auto" style="margin-top: -38px"><a href="https://book.zhishikoo.com/books/category/news/page/2" target="_blank" >查看更多</a></div>-->
+    </div>
+
+
+</body>
+<script>
+    $(function (){
+        var forData={"order":"DESC","sort":"EBookID","limit":"8","flage":"123"}
+        $.ajax({
+            // URL
+            url: 'http://localhost:8080/web_war_exploded/com/demo/controller/ebook/Get',
+            // 参数
+            data: forData,
+            // 请求类型
+            type: 'POST',
+            // 期望的返回数据类型，请根据实际情况修改
+            dataType: 'json',
+            success: function (data) {
+
+                let elements1 = document.querySelectorAll('.f1');
+                let elements2 = document.querySelectorAll('.f2');
+                let elements3 = document.querySelectorAll('.f3');
+                let elements4 = document.querySelectorAll('.f4');
+                let elements5 = document.querySelectorAll('.p1');
+                var i=0
+                elements1.forEach((element, index) => {
+                    if (index < data.rows.length) {
+                        element.src = ".." + data.rows[index].picture;
+                        console.log(data.rows[index].picture);
+                    }
+                });
+
+                elements2.forEach((element, index) => {
+                    if (index < data.rows.length) {
+                        console.log(index);
+                        element.innerText = data.rows[index].title;
+                    }
+                });
+                elements3.forEach((element, index) => {
+                    if (index < data.rows.length) {
+                        console.log(index);
+                        element.innerText = data.rows[index].author;
+                    }
+                });
+                elements4.forEach((element, index) => {
+                    if (index < data.rows.length) {
+                        console.log(index);
+                        element.innerText = data.rows[index].views;
+                    }
+                });
+
+                elements5.forEach((element, index) => {
+                    if (index < data.rows.length) {
+                        element.href = "contain.html?BookID=" + data.rows[index].EBookID;
+                    }
+                });
+                //window.history.back();
+                //  window.location.href = "/web_war_exploded/html/main.html"
+            },
+            timeout:2000,
+            error:function (){
+                alert("网络延迟")
+
+            }
+        });
+
+    })
+    $(function (){
+        var datas={"s":1}
+        $.ajax({
+            // URL
+            url: 'http://localhost:8080/web_war_exploded/com/demo/controller/ebook/Second',
+            // 参数
+            data: datas,
+            // 请求类型
+            type: 'POST',
+            // 期望的返回数据类型，请根据实际情况修改
+            dataType: 'json',
+            success: function (data) {
+
+                let elements1 = document.querySelectorAll('.t2');
+
+                var i=0
+                elements1.forEach((element, index) => {
+                    if (index < data.rows.length) {
+                        element.innerText = data.rows[index].title;
+                        element.href = "contain.html?BookID=" + data.rows[index].EBookID;
+                    }
+                });
+
+
+                //window.history.back();
+                //  window.location.href = "/web_war_exploded/html/main.html"
+            },
+            timeout:2000,
+            error:function (){
+                alert("网络延迟")
+
+            }
+        });
+    })
+</script>
+</html>

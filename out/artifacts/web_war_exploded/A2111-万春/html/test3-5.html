@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="startClock()">启动定时器</button>
+<button onclick="pauseClock()">暂停定时器</button>
+<div id="clock"></div>
+
+<script>
+    var timerInterval; // 用于存储定时器的引用
+
+    function startClock() {
+        // 启动定时器，每秒更新一次时间
+        timerInterval = setInterval(updateTime, 1000);
+        updateTime(); // 立即显示当前时间
+    }
+
+    function pauseClock() {
+        // 暂停定时器
+        clearInterval(timerInterval);
+    }
+
+    function updateTime() {
+        // 获取当前系统时间
+        var currentTime = new Date();
+
+        // 格式化时间为 HH:mm:ss
+        var hours = currentTime.getHours().toString().padStart(2, '0');
+        var minutes = currentTime.getMinutes().toString().padStart(2, '0');
+        var seconds = currentTime.getSeconds().toString().padStart(2, '0');
+
+        // 将时间显示在页面上
+        document.getElementById("clock").textContent = hours + ":" + minutes + ":" + seconds;
+    }
+</script>
+
+
+</body>
+</html>

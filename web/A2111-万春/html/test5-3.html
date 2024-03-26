@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="box">
+    <li><img class="pic pic1" src="../实验素材/1.jpg" ></li>
+    <li><img class="pic pic2" src="../实验素材/2.jpg" ></li>
+
+    <li><img class="pic pic3" src="../实验素材/3.jpg" ></li>
+    <li><img class="pic pic4" src="../实验素材/4.jpg" ></li>
+</ul>
+<style>
+    *{ margin: 0;
+        padding: 0;}
+    .box{
+        width: 720px;
+        height: 176px;
+        background-color: bisque;
+        margin: 15% auto;
+        z-index: 1;
+        display:block;}
+    .pic{width: 140px;
+        height: 140px;
+        border: 2px solid white;
+        margin: 18px 18px;
+        z-index: 10;
+        float:left;}
+    li{list-style: none;}
+    ul li img.pic:hover{ transition:0.5s ease-in;
+        box-shadow: 2px 2px 4px black;}
+    ul li img.pic1:hover{transition:0.5s ease-in;
+        border-radius: 50%;}
+    ul li img.pic2:hover{transition:0.5s ease-in;
+        transform: scale(1.4);}
+    ul li img.pic3:hover{transition:0.5s ease-in;
+        transform: rotate(30deg);}
+    ul li img.pic4:hover{transition:0.5s ease-in;
+        opacity: 0.2;}
+
+
+</style>
+
+</body>
+</html>
